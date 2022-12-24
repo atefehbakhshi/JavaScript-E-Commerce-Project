@@ -1,0 +1,32 @@
+body {
+  background-image: url(../images/wallpaperDog.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.container {
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.35);
+  color: white;
+  position: relative;
+}
+#wallpaper {
+  padding: 2em;
+  position: absolute;
+  bottom: 4em;
+}
+h3 {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+h1 {
+  font-weight: 700;
+  font-size: 72px;
+  margin-bottom: 28px;
+}
+p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
