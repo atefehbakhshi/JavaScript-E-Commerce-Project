@@ -1,3 +1,5 @@
+import { slideOne, slideTwo, slideThree } from "../modules/slides.js";
+
 const $ = document;
 
 const page1 = $.querySelector("#page-one");
@@ -12,34 +14,18 @@ const btn1 = $.querySelector("#btn-page-one");
 const btn2 = $.querySelector("#btn-page-two");
 const btn3 = $.querySelector("#btn-page-three");
 
-const slideOne = () => {
-  page1.style.transform = "translateX(0)";
-  page2.style.transform = "translateX(100%)";
-  page3.style.transform = "translateX(200%)";
-};
-const slideTwo = () => {
-  page1.style.transform = "translateX(-100%)";
-  page2.style.transform = "translateX(0)";
-  page3.style.transform = "translateX(100%)";
-};
-const slideThree = () => {
-  page1.style.transform = "translateX(-200%)";
-  page2.style.transform = "translateX(-100%)";
-  page3.style.transform = "translateX(0)";
-};
-
 slideItemOne.forEach((item) => {
-  item.addEventListener("click", slideOne);
+  item.addEventListener("click", () => slideOne(page1, page2, page3));
 });
 slideItemTwo.forEach((item) => {
-  item.addEventListener("click", slideTwo);
+  item.addEventListener("click", () => slideTwo(page1, page2, page3));
 });
 slideItemThree.forEach((item) => {
-  item.addEventListener("click", slideThree);
+  item.addEventListener("click", () => slideThree(page1, page2, page3));
 });
 
-btn1.addEventListener("click", slideTwo);
-btn2.addEventListener("click", slideThree);
+btn1.addEventListener("click", () => slideTwo(page1, page2, page3));
+btn2.addEventListener("click", () => slideThree(page1, page2, page3));
 btn3.addEventListener("click", () => {
   window.location.href = "loginPage.html";
 });
