@@ -1,0 +1,133 @@
+/* #row-two {
+
+} */
+#title-favorit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+#sold-review {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+#sold-num {
+  background-color: #f3f3f3;
+  padding: 0.25em 0.5em;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+#desc h3 {
+  margin-bottom: 0.5em;
+}
+#size-color {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+#product-size {
+  width: 20%;
+  margin: 0 2em 0 0;
+}
+#product-color {
+  width: 60%;
+  /* position: relative; */
+}
+.size-color-text {
+  margin-bottom: 0;
+}
+#colors {
+  display: flex;
+  gap: 0.5em;
+  overflow-x: auto;
+}
+
+#colors::-webkit-scrollbar {
+  display: none;
+}
+.color-item {
+  width: 2.5em;
+  height: 2.15em;
+  background-color: silver;
+  border-radius: 50%;
+  padding: 0.25em 1em;
+  cursor: pointer;
+}
+#silver {
+  background-color: silver;
+}
+#green {
+  background-color: rgb(7, 69, 23);
+}
+#perpule {
+  background-color: rgb(135, 17, 198);
+}
+#brown {
+  background-color: rgb(87, 48, 7);
+}
+#white {
+  background-color: rgb(237, 237, 237);
+}
+#black {
+  background-color: rgb(0, 0, 0);
+}
+#red {
+  background-color: rgb(228, 82, 82);
+}
+#blue {
+  background-color: rgb(52, 48, 171);
+}
+/* quantity */
+#quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-weight: 700;
+  font-size: 1.25em;
+  color: #152536;
+  margin-bottom: 1em;
+}
+#quantity {
+  display: flex;
+  gap: 1em;
+  padding: 0.25em 1em;
+  border-radius: 30px;
+  background-color: #f3f3f3;
+}
+/* row 3 */
+#row-three {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#price-info p:first-child {
+  margin-bottom: 0.5em;
+}
+#price {
+  font-weight: 700;
+  font-size: 1.25em;
+  color: #152536;
+}
+#add-to-cart {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  background-color: #152536;
+  color: white;
+  border-radius: 35px;
+  cursor: pointer;
+}
+#add-to-cart button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  color: white;
+}
