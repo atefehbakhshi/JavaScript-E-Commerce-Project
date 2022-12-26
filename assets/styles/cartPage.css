@@ -1,0 +1,120 @@
+.container {
+  background-color: #fafafa;
+  padding-top: 2em;
+  min-height: 100vh;
+}
+#search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#company-logo {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+#company-logo img {
+  /* remove white background */
+  mix-blend-mode: multiply;
+  max-width: 25%;
+}
+/* cards */
+#cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 10em;
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 25px;
+  background-color: #fff;
+}
+.product-img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  background-color: #f3f3f3;
+  border-radius: 25px;
+}
+.product-img img {
+  width: 100%;
+}
+.product-info {
+  width: 60%;
+}
+.info-row-one {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+.info-row-two {
+  display: flex;
+  gap: 0.5em;
+  font-size: 0.75em;
+  margin-bottom: 0.5em;
+}
+.color-item {
+  background-color: black;
+  border-radius: 50%;
+  padding: 0.2em 0.8em;
+  cursor: pointer;
+  margin-right: 0.25em;
+}
+.info-row-three {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+.price-quantity {
+  display: flex;
+  gap: 1em;
+  padding: 0.25em 1em;
+  border-radius: 30px;
+  background-color: #f3f3f3;
+}
+/* total price and checkout button */
+#total-price-checkout-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 2em 3em 2em;
+  border-radius: 35px;
+  background-color: #fff;
+  position: fixed;
+  bottom: 2em;
+  left: 0;
+}
+#title-text {
+  font-size: 0.75em;
+  color: darkgray;
+  margin-bottom: 0.5em;
+}
+#total-price {
+  font-weight: 700;
+}
+#checkout-button {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 0.5em;
+  border-radius: 30px;
+  background-color: #152536;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+#checkout-button button {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
