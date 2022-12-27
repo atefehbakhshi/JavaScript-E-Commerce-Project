@@ -4,6 +4,7 @@ const $ = document;
 
 //========= Dom variables =========
 const userNameInfo = $.querySelector("#user-name-info");
+const searcBox = $.querySelector("#search-bar");
 const companyLogos = $.querySelector("#companies-logo");
 const productsContainer = $.querySelector("#products");
 const mostPopularButtons = $.querySelector("#header-buttons");
@@ -49,4 +50,11 @@ companyLogos.addEventListener("click", (e) => {
 mostPopularButtons.addEventListener("click", (e) => {
   const companyName = e.target.innerText;
   window.location.href = `homeMostPopularFilter.html?model=${companyName}`;
+});
+
+// search
+searcBox.addEventListener("keyup", (e) => {
+  if (e.keyCode === 13) {
+    window.location.href = `searchPage.html?search=${e.target.value}`;
+  }
 });

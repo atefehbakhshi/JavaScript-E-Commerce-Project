@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/homePage.css" />
+    <link rel="stylesheet" href="../assets/styles/searchPage.css" />
+    <title>search page</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- search -->
+      <div id="search-bar">
+        <span class="material-symbols-outlined"> search </span>
+        <input type="text" id="search" placeholder="Search" />
+      </div>
+      <div id="result-info">
+        <p>Result for "<span id="search-text"> </span>"</p>
+        <p><span id="result-numbers"></span> founds</p>
+      </div>
+      <!-- product not found -->
+      <div id="not-found">
+        <img src="../assets/images/productNotFounf.png" alt="" />
+        <div>
+          <h4>Not Foun</h4>
+          <p>
+            Sorry, the keyword you entered cannot be found, please check again
+            or search with another keyword.
+          </p>
+        </div>
+      </div>
+      <!-- products -->
+      <div id="products"></div>
+    </div>
+    <script type="module" src="../assets/script/searchPage.js"></script>
+  </body>
+</html>
