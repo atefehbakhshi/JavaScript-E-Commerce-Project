@@ -27,6 +27,7 @@ let addToCartButton = $.querySelector("#add-to-cart");
 // variables for adding product to cart
 let userSelectedProperties = {
   name: "",
+  image: "",
   size: "",
   color: "",
   quantity: 1,
@@ -36,6 +37,7 @@ let userSelectedProperties = {
 // functions
 const fillUserSelectedProperties = (data) => {
   userSelectedProperties.name = data.name;
+  userSelectedProperties.image = data.image;
   userSelectedProperties.price = data.price;
   userSelectedProperties.totalPrice = data.price;
 };
@@ -110,12 +112,14 @@ productColor.addEventListener("click", (e) => {
 productQuantity.addEventListener("click", (e) => {
   if (e.target.innerText === "-") {
     productNumber.innerText = Number(productNumber.innerText) - 1;
+    userSelectedProperties.quantity = productNumber.innerText;
   }
   if (e.target.innerText === "+") {
     productNumber.innerText = Number(productNumber.innerText) + 1;
+    userSelectedProperties.quantity = productNumber.innerText;
   }
   totalPrice.innerText = `${
-    productNumber.innerText * userSelectedProperties.price
+    userSelectedProperties.quantity * userSelectedProperties.price
   }.00`;
   userSelectedProperties.totalPrice = totalPrice.innerText;
 });
