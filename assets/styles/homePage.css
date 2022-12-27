@@ -151,6 +151,9 @@
   font-weight: 600;
   font-size: 12px;
 }
+.product-quantity {
+  display: none;
+}
 /* navigation buttons */
 #action-nav {
   width: 100%;
