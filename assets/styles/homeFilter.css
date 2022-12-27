@@ -3,6 +3,14 @@ nav {
   display: flex;
   gap: 1em;
 }
-#model {
+#title-text {
   font-weight: 700;
+}
+button {
+  background-color: transparent !important;
+  color: #152536 !important;
+}
+.selected-button {
+  background-color: #152536 !important;
+  color: white !important;
 }
