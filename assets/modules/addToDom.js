@@ -1,5 +1,6 @@
 const productsContainer = document.querySelector("#products");
 export const addToDom = (list) => {
+  productsContainer.innerHTML = "";
   list.forEach((elem) => {
     const html = `
         <div class="product" id="${elem.id}">
