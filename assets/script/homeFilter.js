@@ -2,15 +2,16 @@ import { addToDom } from "../modules/addToDom.js";
 
 const API_URL = "http://localhost:3000";
 const $ = document;
-// Dom variables
+//========= Dom variables =========
 const backToHome = $.querySelector("#back-to-home-page");
-const model = $.querySelector("#model");
+const model = $.querySelector("#title-text");
 
 // get company name
 const paramString = window.location.search;
 const searchParams = new URLSearchParams(paramString);
 const productModel = searchParams.get("model");
 
+//========= functions =========
 // request to server
 const filterProduct = async (model) => {
   try {
@@ -21,7 +22,7 @@ const filterProduct = async (model) => {
     console.log(error);
   }
 };
-// events
+//========= events =========
 model.innerText = productModel;
 
 backToHome.addEventListener("click", () => {
