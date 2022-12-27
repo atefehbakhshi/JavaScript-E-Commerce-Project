@@ -1,0 +1,8 @@
+nav {
+  padding: 1em 0;
+  display: flex;
+  gap: 1em;
+}
+#model {
+  font-weight: 700;
+}
