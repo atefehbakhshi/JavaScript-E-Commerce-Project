@@ -42,12 +42,14 @@
               <span class="material-icons location"> location_on </span>
             </div>
             <div>
-              <h5 class="address-name">Home</h5>
-              <p class="address-desc">61480 Sunbrook Park, PC 5679</p>
+              <h5 class="address-name" id="address-title">Home</h5>
+              <p class="address-desc" id="address-desc">
+                61480 Sunbrook Park, PC 5679
+              </p>
             </div>
           </div>
           <div>
-            <span class="material-icons"> edit </span>
+            <span class="material-icons" id="go-to-address-page"> edit </span>
           </div>
         </div>
       </div>
@@ -55,80 +57,7 @@
       <!-- order list -->
       <div id="order-list">
         <h4>Order List</h4>
-        <div id="list-container">
-          <div class="card">
-            <div class="product-img">
-              <img src="../assets/images/shoe1.png" alt="shoea" />
-            </div>
-            <div class="product-info">
-              <div class="info-row-one">
-                <h4>Air Jordan 3 Retro</h4>
-              </div>
-              <div class="info-row-two">
-                <div class="colors">
-                  <span class="color-item"></span>
-                  <span>Black</span>
-                </div>
-                <span>|</span>
-                <p>Size = 42</p>
-              </div>
-              <div class="info-row-three">
-                <h5>$105.00</h5>
-                <div class="quantity">
-                  <span>2</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-img">
-              <img src="../assets/images/shoe1.png" alt="shoea" />
-            </div>
-            <div class="product-info">
-              <div class="info-row-one">
-                <h4>Air Jordan 3 Retro</h4>
-              </div>
-              <div class="info-row-two">
-                <div class="colors">
-                  <span class="color-item"></span>
-                  <span>Black</span>
-                </div>
-                <span>|</span>
-                <p>Size = 42</p>
-              </div>
-              <div class="info-row-three">
-                <h5>$105.00</h5>
-                <div class="quantity">
-                  <span>2</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="product-img">
-              <img src="../assets/images/shoe1.png" alt="shoea" />
-            </div>
-            <div class="product-info">
-              <div class="info-row-one">
-                <h4>Air Jordan 3 Retro</h4>
-              </div>
-              <div class="info-row-two">
-                <div class="colors">
-                  <span class="color-item"></span>
-                  <span>Black</span>
-                </div>
-                <span>|</span>
-                <p>Size = 42</p>
-              </div>
-              <div class="info-row-three">
-                <h5>$105.00</h5>
-                <div class="quantity">
-                  <span>2</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div id="list-container"></div>
       </div>
       <hr />
       <!-- shipping type -->
@@ -155,7 +84,7 @@
       <div class="total-price-container">
         <div class="total-price-row">
           <p>Amount</p>
-          <p>$585.00</p>
+          <p id="user-total-price">$585.00</p>
         </div>
         <div class="total-price-row">
           <p>Shipping</p>
@@ -177,6 +106,6 @@
         </div>
       </div>
     </div>
-    <!-- <script src="../assets/script/loginPage.js"></script> -->
+    <script src="../assets/script/checkoutPage.js"></script>
   </body>
 </html>

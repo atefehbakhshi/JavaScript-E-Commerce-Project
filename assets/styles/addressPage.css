@@ -1,0 +1,64 @@
+.container {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  position: relative;
+}
+.address-container {
+  margin-bottom: 1em;
+}
+/* button */
+button {
+  padding: 1em;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+#add-new-address {
+  width: 100%;
+  background-color: rgb(226, 225, 225);
+  color: #152536;
+}
+#apply {
+  width: 90%;
+  position: fixed;
+  bottom: 2em;
+  background-color: #152536;
+  color: white;
+}
+/* form */
+#form-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form input {
+  width: 75%;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+form button {
+  width: 75%;
+  margin-top: 3em;
+  background-color: rgb(226, 225, 225);
+  color: #152536;
+  font-weight: 700;
+}
