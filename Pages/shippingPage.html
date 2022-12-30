@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/checkoutPage.css" />
+    <link rel="stylesheet" href="../assets/styles/addressPage.css" />
+    <title>address page</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- back to checkout page -->
+      <nav>
+        <div id="back-to-checkout-page">
+          <span class="material-symbols-outlined"> arrow_back </span>
+          <p>Choose Shipping</p>
+        </div>
+      </nav>
+      <!-- shipping type -->
+
+      <div id="shipping-type-list">
+        <div class="address-container">
+          <div class="address-info">
+            <span class="material-symbols-outlined location">
+              check_box_outline_blank
+            </span>
+            <div>
+              <h5 class="address-name">Economy</h5>
+              <p class="address-desc">Estimated Arrival. Dec 20-23</p>
+            </div>
+          </div>
+          <div>
+            <label for="economy">$10</label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="economy"
+              name="shipping-type"
+            />
+          </div>
+        </div>
+        <div class="address-container">
+          <div class="address-info">
+            <span class="material-symbols-outlined location">check_box</span>
+            <div>
+              <h5 class="address-name">Regular</h5>
+              <p class="address-desc">Estimated Arrival. Dec 20-22</p>
+            </div>
+          </div>
+          <div>
+            <label for="regular">$15</label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="regular"
+              name="shipping-type"
+            />
+          </div>
+        </div>
+        <div class="address-container">
+          <div class="address-info">
+            <span class="material-symbols-outlined location"
+              >local_shipping</span
+            >
+            <div>
+              <h5 class="address-name">Cargo</h5>
+              <p class="address-desc">Estimated Arrival. Dec 19-20</p>
+            </div>
+          </div>
+          <div>
+            <label for="cargo">$20</label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="cargo"
+              name="shipping-type"
+            />
+          </div>
+        </div>
+        <div class="address-container">
+          <div class="address-info">
+            <span class="material-symbols-outlined location"
+              >local_shipping</span
+            >
+            <div>
+              <h5 class="address-name">Express</h5>
+              <p class="address-desc">Estimated Arrival. Dec 18-19</p>
+            </div>
+          </div>
+          <div>
+            <label for="express">$30</label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="express"
+              name="shipping-type"
+            />
+          </div>
+        </div>
+      </div>
+
+      <button id="apply">Apply</button>
+    </div>
+
+    <script src="../assets/script/shippingPage.js"></script>
+  </body>
+</html>

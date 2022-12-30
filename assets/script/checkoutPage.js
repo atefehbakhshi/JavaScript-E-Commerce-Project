@@ -4,6 +4,15 @@ const backToCartPage = $.querySelector("#back-to-checkout-page");
 const listContainer = $.querySelector("#list-container");
 const userTotalPrice = $.querySelector("#user-total-price");
 const goToAddressPage = $.querySelector("#go-to-address-page");
+// shipping page
+const shippingTypePreviousSelect = $.querySelector("#shipping-type");
+const shippingTypeAfterSelect = $.querySelector(
+  "#after-selected-shipping-type"
+);
+const shippingTitle = $.querySelector("#shipping-title");
+const shippingDescription = $.querySelector("#shipping-desc");
+const shippingCost = $.querySelector("#shipping-cost");
+const goToShippingPage = $.querySelector("#go-to-shipping-page");
 
 // functions
 const addToProducts = (list) => {
@@ -84,3 +93,24 @@ readAddress();
 goToAddressPage.addEventListener("click", () => {
   window.location.href = "addressPage.html";
 });
+
+// shipping type
+const navToShippingPage = $.querySelector("#select-shipping-type");
+navToShippingPage.addEventListener("click", () => {
+  window.location.href = "shippingPage.html";
+});
+goToShippingPage.addEventListener("click", () => {
+  window.location.href = "shippingPage.html";
+});
+const getShippingType = () => {
+  let selectedShipping = JSON.parse(localStorage.getItem("shippingType"));
+  if (selectedShipping !== null) {
+    shippingTypePreviousSelect.style.display = "none";
+    shippingTitle.innerText = selectedShipping.title;
+    shippingDescription.innerText = selectedShipping.desc;
+    shippingCost.innerText = selectedShipping.cost;
+    shippingTypeAfterSelect.style.display = "block";
+    localStorage.removeItem("shippingType");
+  }
+};
+getShippingType();

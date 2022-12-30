@@ -42,10 +42,8 @@
               <span class="material-icons location"> location_on </span>
             </div>
             <div>
-              <h5 class="address-name" id="address-title">Home</h5>
-              <p class="address-desc" id="address-desc">
-                61480 Sunbrook Park, PC 5679
-              </p>
+              <h5 class="address-name" id="address-title"></h5>
+              <p class="address-desc" id="address-desc"></p>
             </div>
           </div>
           <div>
@@ -61,14 +59,40 @@
       </div>
       <hr />
       <!-- shipping type -->
-      <div id="shipping-type">
-        <h4>Choose Shipping</h4>
-        <div class="selected-shipping">
-          <div class="selected-shipping-type">
-            <span class="material-icons"> local_shipping </span>
-            <h5>Choose Shipping Type</h5>
+      <div id="shipping-type-container">
+        <div id="shipping-type">
+          <h4>Choose Shipping</h4>
+          <div class="selected-shipping">
+            <div class="selected-shipping-type">
+              <span class="material-icons"> local_shipping </span>
+              <h5>Choose Shipping Type</h5>
+            </div>
+            <span class="material-icons" id="select-shipping-type">
+              navigate_next
+            </span>
           </div>
-          <span class="material-icons"> navigate_next </span>
+        </div>
+        <div id="after-selected-shipping-type">
+          <div class="shiping-address">
+            <h4>Shipping Address</h4>
+            <div class="address-container">
+              <div class="address-info">
+                <div id="outer-border">
+                  <span class="material-icons location"> location_on </span>
+                </div>
+                <div>
+                  <h5 class="address-name" id="shipping-title"></h5>
+                  <p class="address-desc" id="shipping-desc"></p>
+                </div>
+              </div>
+              <div id="edit-shipping">
+                <span id="shipping-cost"></span>
+                <span class="material-icons" id="go-to-shipping-page">
+                  edit
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <hr />
