@@ -101,7 +101,7 @@
         <h4>Promo Code</h4>
         <div class="input-code">
           <input type="text" placeholder="Enter Promo Code" id="user-code" />
-          <div class="plus-button">+</div>
+          <div class="plus-button" id="add-promo-code">+</div>
         </div>
       </div>
       <!-- total price -->
@@ -112,12 +112,16 @@
         </div>
         <div class="total-price-row">
           <p>Shipping</p>
-          <p>-</p>
+          <p id="user-selected-shipping">-</p>
+        </div>
+        <div class="total-price-row" id="promo-price-row">
+          <p>Promo</p>
+          <p id="user-selected-promo-code">-</p>
         </div>
         <hr />
         <div class="total-price-row">
           <p>Total</p>
-          <p>-</p>
+          <p id="last-price">-</p>
         </div>
       </div>
     </div>

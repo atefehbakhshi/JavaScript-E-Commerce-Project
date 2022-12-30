@@ -13,6 +13,16 @@ const shippingTitle = $.querySelector("#shipping-title");
 const shippingDescription = $.querySelector("#shipping-desc");
 const shippingCost = $.querySelector("#shipping-cost");
 const goToShippingPage = $.querySelector("#go-to-shipping-page");
+const userSelectedShipping = $.querySelector("#user-selected-shipping");
+// promo code
+const addPromoCode = $.querySelector("#add-promo-code");
+const userCode = $.querySelector("#user-code");
+const promoPriceRow = $.querySelector("#promo-price-row");
+const userSelectedPromoCode = $.querySelector("#user-selected-promo-code");
+// total price
+const lastPrice = $.querySelector("#last-price");
+// payment
+const paymentButton = $.querySelector("#payment-button");
 
 // functions
 const addToProducts = (list) => {
@@ -54,6 +64,9 @@ const changeTotalPrice = () => {
     userTotalPricecalculate += Number(item.innerText);
   });
   userTotalPrice.innerText = `$${userTotalPricecalculate}`;
+  // =================calculate whole cost =================
+  localStorage.setItem("productsPrice", userTotalPricecalculate);
+  // ================= end calculate whole cost =================
 };
 
 // back to cart page
@@ -109,8 +122,49 @@ const getShippingType = () => {
     shippingTitle.innerText = selectedShipping.title;
     shippingDescription.innerText = selectedShipping.desc;
     shippingCost.innerText = selectedShipping.cost;
+    userSelectedShipping.innerText = selectedShipping.cost;
+    // =================calculate whole cost =================
+    // lastprice = productsprice +shippingprice
+    const productsPrice = Number(localStorage.getItem("productsPrice"));
+    const priceSum =
+      productsPrice + Number(selectedShipping.cost.match(/\d+/)[0]);
+    lastPrice.innerText = `$${priceSum}`;
+    // ================= end calculate whole cost =================
     shippingTypeAfterSelect.style.display = "block";
     localStorage.removeItem("shippingType");
   }
 };
 getShippingType();
+
+// promo code
+const calculateDiscount = (value) => {
+  userCode.value = `Discount ${value}% Off`;
+  userCode.classList.add("input-bold-style");
+
+  // =================calculate whole cost =================
+  const totalCostBeforDiscount = lastPrice.innerText.match(/\d+/)[0];
+  const discountCost = Math.round((totalCostBeforDiscount * value) / 100);
+  const totalCostAfterDiscount = totalCostBeforDiscount - discountCost;
+  lastPrice.innerText = `$${totalCostAfterDiscount}`;
+  // ================= end calculate whole cost =================
+  userSelectedPromoCode.innerText = `-$${discountCost}`;
+  promoPriceRow.style.display = "flex";
+};
+const searchForEnterPromoCode = async (code) => {
+  try {
+    const res = await fetch(`${API_URL}/promoCode?codeNumber_like=${code}`);
+    const data = await res.json();
+    if (data.length === 1) {
+      calculateDiscount(data[0].value);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+addPromoCode.addEventListener("click", () => {
+  searchForEnterPromoCode(userCode.value);
+});
+// payment
+paymentButton.addEventListener("click", () => {
+  if (lastPrice.innerText !== "-") window.location.href = "paymentPage.html";
+});

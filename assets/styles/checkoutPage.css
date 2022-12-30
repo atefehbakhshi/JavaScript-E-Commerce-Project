@@ -184,3 +184,13 @@ hr {
   font-weight: 700;
   margin-right: 1em;
 }
+/* promo code */
+.input-bold-style {
+  font-size: 1em;
+  background-color: black !important;
+  color: white;
+  font-weight: 700;
+}
+#promo-price-row {
+  display: none;
+}
