@@ -1,0 +1,57 @@
+.address-info img {
+  width: 75%;
+}
+#alert-text {
+  margin-bottom: 1em;
+}
+#plus-button {
+  border: 1px solid black;
+  padding: 0.05em 0.25em;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#plus-button:hover {
+  background-color: #152536;
+  color: white;
+}
+/* modal */
+#modal-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#payment-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 35px;
+}
+#modal-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+}
+#modal-buttons button {
+  width: 100%;
+  margin-bottom: 1em;
+}
+#view-order-button {
+  background-color: #152536;
+  color: white;
+}

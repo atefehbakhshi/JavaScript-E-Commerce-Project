@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/checkoutPage.css" />
+    <link rel="stylesheet" href="../assets/styles/addressPage.css" />
+    <link rel="stylesheet" href="../assets/styles/paymentStyle.css" />
+    <title>payment page</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- back to checkout page -->
+      <nav>
+        <div id="back-to-checkout-page">
+          <span class="material-symbols-outlined"> arrow_back </span>
+          <p>Payment Methods</p>
+        </div>
+        <div>
+          <div id="plus-button"><span>+</span></div>
+        </div>
+      </nav>
+      <!-- shipping type -->
+      <p id="alert-text">Select the payment method you want to use.</p>
+      <div id="payment-method">
+        <div class="address-container">
+          <div class="address-info">
+            <div>
+              <img src="../assets/images/pay-wallet.png" alt="shoea" />
+            </div>
+            <h5 class="address-name">My Wallet</h5>
+          </div>
+          <div>
+            <label for="my-wallet" class="label"></label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="my-wallet"
+              name="payment"
+            />
+          </div>
+        </div>
+        <div class="address-container">
+          <div class="address-info">
+            <div>
+              <img src="../assets/images/pay-paypal.png" alt="shoea" />
+            </div>
+            <h5 class="address-name">PayPal</h5>
+          </div>
+          <div>
+            <label for="paypal" class="label"></label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="paypal"
+              name="payment"
+            />
+          </div>
+        </div>
+        <div class="address-container">
+          <div class="address-info">
+            <div>
+              <img src="../assets/images/pay-google.png" alt="shoea" />
+            </div>
+            <h5 class="address-name">Google Pay</h5>
+          </div>
+          <div>
+            <label for="google-pay" class="label"></label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="google-pay"
+              name="payment"
+            />
+          </div>
+        </div>
+        <div class="address-container">
+          <div class="address-info">
+            <div>
+              <img src="../assets/images/pay-apple.png" alt="shoea" />
+            </div>
+            <h5 class="address-name">Apple Pay</h5>
+          </div>
+          <div>
+            <label for="apple-pay" class="label"></label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="apple-pay"
+              name="payment"
+            />
+          </div>
+        </div>
+        <div class="address-container">
+          <div class="address-info">
+            <div>
+              <img src="../assets/images/pay-mastercard.png" alt="shoea" />
+            </div>
+            <h5 class="address-name">.... .... .... 1234</h5>
+          </div>
+          <div>
+            <label for="mastercard" class="label"></label>
+            <input
+              class="checked-input"
+              type="radio"
+              id="mastercard"
+              name="payment"
+            />
+          </div>
+        </div>
+      </div>
+      <button id="apply">Confirm Payment</button>
+    </div>
+    <!-- modal -->
+    <div id="modal-container">
+      <div id="payment-modal">
+        <img src="../assets/images/payment-modal.png" alt="shoea" />
+        <h3>Order Successful!</h3>
+        <p>You made successfully made order</p>
+        <div id="modal-buttons">
+          <button id="view-order-button">View Order</button>
+          <button id="view-recipt-button">View E-Recipt</button>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <script src="../assets/script/paymentPage.js"></script>
+  </body>
+</html>
