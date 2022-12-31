@@ -24,6 +24,8 @@ const productNumber = $.querySelector("#product-number");
 let totalPrice = $.querySelector("#total-price");
 let addToCartButton = $.querySelector("#add-to-cart");
 
+let addToFavoriteButton = $.querySelector("#favorite");
+
 // variables for adding product to cart
 let userSelectedProperties = {
   name: "",
@@ -33,6 +35,8 @@ let userSelectedProperties = {
   quantity: 1,
   price: "",
   totalPrice: "",
+  delivery: false,
+  id: "",
 };
 // functions
 const fillUserSelectedProperties = (data) => {
@@ -104,7 +108,6 @@ readProduct(productId);
 // user selected properties
 productSize.addEventListener("click", (e) => {
   userSelectedProperties.size = e.target.innerText;
-  console.log(userSelectedProperties);
 });
 productColor.addEventListener("click", (e) => {
   userSelectedProperties.color = e.target.id;
@@ -136,3 +139,5 @@ addToCartButton.addEventListener("click", () => {
     window.location.href = "cartPage.html";
   }
 });
+// add to favorits
+addToFavoriteButton.addEventListener("click", () => {});

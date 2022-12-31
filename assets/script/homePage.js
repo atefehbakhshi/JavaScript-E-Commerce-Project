@@ -36,7 +36,7 @@ productsContainer.addEventListener("click", (e) => {
   if (Number(quantity) !== 0) {
     window.location.href = "productPage2.html?id=" + id;
   } else {
-    window.location.href = "productPage.html?id=" + id;
+    window.location.href = "productPage1.html?id=" + id;
   }
 });
 
