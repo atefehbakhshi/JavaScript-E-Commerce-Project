@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/homePage.css" />
+    <link rel="stylesheet" href="../assets/styles/cartPage.css" />
+    <link rel="stylesheet" href="../assets/styles/orderPage.css" />
+    <title>order page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="search-box">
+        <div id="company-logo">
+          <img src="../assets/images/logo.png" alt="shoea" id="logo" />
+          <h3>My Cart</h3>
+        </div>
+        <div id="search">
+          <span class="material-symbols-outlined"> search </span>
+        </div>
+      </div>
+      <div id="active-completed-buttons">
+        <button id="active-button" class="activ-header-button">Active</button>
+        <button id="complete-button">Complete</button>
+      </div>
+      <hr />
+      <!-- lists -->
+      <div id="active-list" class="list-container"></div>
+      <div id="complete-list" class="list-container"></div>
+      <!-- navigation buttons -->
+      <nav id="action-nav">
+        <div class="action-nav-buttons" id="home">
+          <span class="material-symbols-outlined"> home </span>
+          <span class="material-icons icon active-icon"> home </span>
+          <span class="text activ-text">Home</span>
+        </div>
+
+        <div class="action-nav-buttons" id="home">
+          <span class="material-symbols-outlined"> shopping_bag </span>
+          <span class="material-icons active-icon"> shopping_bag </span>
+          <span class="text">Cart</span>
+        </div>
+
+        <div class="action-nav-buttons" id="home">
+          <span class="material-symbols-outlined active-icon">
+            shopping_cart
+          </span>
+          <span class="material-icons"> shopping_cart </span>
+          <span class="text">Orders</span>
+        </div>
+
+        <div class="action-nav-buttons" id="home">
+          <span class="material-symbols-outlined">
+            account_balance_wallet
+          </span>
+          <span class="material-icons active-icon">
+            account_balance_wallet
+          </span>
+          <span class="text">Wallet</span>
+        </div>
+
+        <div class="action-nav-buttons" id="home">
+          <span class="material-symbols-outlined"> person </span>
+          <span class="material-icons active-icon"> person </span>
+          <span class="text">Profile</span>
+        </div>
+      </nav>
+    </div>
+    <div id="modal-container">
+      <div id="delete-modal">
+        <h3>Remove From Cart</h3>
+        <hr />
+        <div id="remove-item-container"></div>
+        <hr />
+        <div id="modal-buttons">
+          <button id="cancel-button">Cancel</button>
+          <button id="remove-button">Yes, Remove</button>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/script/orderPage.js"></script>
+  </body>
+</html>

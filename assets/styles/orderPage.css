@@ -1,0 +1,64 @@
+#active-completed-buttons {
+  display: flex;
+}
+#active-completed-buttons button {
+  width: 50%;
+  padding: 0.5em;
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  text-align: center;
+}
+hr {
+  margin-bottom: 1em;
+}
+.activ-header-button {
+  border-bottom: 4px solid #152536 !important;
+}
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+#active-list {
+  display: flex;
+}
+#complete-list {
+  display: none;
+}
+
+/* list items */
+.alert-delivery {
+  margin: 0.5em 0;
+  padding: 0.25em 0.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75em;
+}
+.track-order {
+  margin: 0.5em 0;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 20px;
+  background-color: #152536;
+  color: white;
+  font-size: 0.75em;
+}
+/* not found */
+#not-found {
+  width: 70%;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+#not-found img {
+  mix-blend-mode: multiply;
+}
+#not-found h4 {
+  margin-bottom: 1em;
+}
+#alert-text {
+  text-align: center;
+}
