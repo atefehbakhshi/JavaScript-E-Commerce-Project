@@ -24,7 +24,8 @@ const productNumber = $.querySelector("#product-number");
 let totalPrice = $.querySelector("#total-price");
 let addToCartButton = $.querySelector("#add-to-cart");
 
-let addToFavoriteButton = $.querySelector("#favorite");
+const addToFavoriteButton = $.querySelector("#favorite");
+const removeFromFavoriteButton = $.querySelector("#removeFavorite");
 
 // variables for adding product to cart
 let userSelectedProperties = {
@@ -91,7 +92,20 @@ const addToDom = (product) => {
   const imageThree = image3.children;
   imageThree[1].src = product.image;
 };
-
+// checking product is in favorite list or not
+const isFavorite = async (id) => {
+  try {
+    const res = await fetch(`${API_URL}/favorites?id=${id}`);
+    const data = await res.json();
+    if (data.length !== 0) {
+      removeFromFavoriteButton.classList.remove("hide");
+    } else {
+      addToFavoriteButton.classList.remove("hide");
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
 const readProduct = async (id) => {
   try {
     const res = await fetch(`${API_URL}/products/${id}`);
@@ -99,6 +113,8 @@ const readProduct = async (id) => {
     fillUserSelectedProperties(data);
     totalPrice.innerText = data.price;
     addToDom(data);
+    // check is favorite or not
+    isFavorite(id);
   } catch (error) {
     console.log(error);
   }
@@ -149,5 +165,42 @@ addToCartButton.addEventListener("click", () => {
     window.location.href = "cartPage.html";
   }
 });
-// add to favorits
-addToFavoriteButton.addEventListener("click", () => {});
+
+const addToFavoriteList = async (id) => {
+  try {
+    const res = await fetch(`${API_URL}/products/${id}`);
+    const data = await res.json();
+    // add to list
+    try {
+      const res = await fetch(`${API_URL}/favorites`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const removeFromFavoriteList = async (id) => {
+  try {
+    const res = await fetch(`${API_URL}/favorites/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// add to favorites list
+addToFavoriteButton.addEventListener("click", () =>
+  addToFavoriteList(productId)
+);
+// remove from favorites list
+removeFromFavoriteButton.addEventListener("click", () =>
+  removeFromFavoriteList(productId)
+);

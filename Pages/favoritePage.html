@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/homePage.css" />
+    <link rel="stylesheet" href="../assets/styles/homeFilter.css" />
+    <link rel="stylesheet" href="../assets/styles/favoritPage.css" />
+    <title>favorite</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav id="back-to-home-page">
+          <span class="material-symbols-outlined"> arrow_back </span>
+          <p id="title-text">My Wishlist</p>
+        </nav>
+        <span class="material-symbols-outlined"> search </span>
+      </header>
+
+      <!-- most popular -->
+      <div id="most-popular">
+        <header>
+          <div id="header-buttons">
+            <button>All</button>
+            <button>Nike</button>
+            <button>Adidas</button>
+            <button>Puma</button>
+            <button>Asics</button>
+            <button>Reebok</button>
+            <button>New Balance</button>
+            <button>Converse</button>
+          </div>
+        </header>
+      </div>
+      <!-- products -->
+      <div id="products"></div>
+    </div>
+    <!-- delete modal -->
+    <div class="modal-container">
+      <div id="delete-modal">
+        <p>Delete this product from wishlist?</p>
+        <div id="button-container">
+          <button id="cancel">Cancel</button>
+          <button id="apply">Apply</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../assets/script/favoritePage.js"></script>
+  </body>
+</html>

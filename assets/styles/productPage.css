@@ -104,3 +104,10 @@ hr {
   border: 1px solid #ededed;
   margin-bottom: 1em;
 }
+/* favorite */
+#removeFavorite {
+  color: red;
+}
+.hide {
+  display: none;
+}

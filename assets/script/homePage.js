@@ -8,6 +8,7 @@ const searcBox = $.querySelector("#search-bar");
 const companyLogos = $.querySelector("#companies-logo");
 const productsContainer = $.querySelector("#products");
 const mostPopularButtons = $.querySelector("#header-buttons");
+const goToWishList = $.querySelector("#favorit-page");
 
 //========= functions =========
 const readProduct = async () => {
@@ -57,4 +58,8 @@ searcBox.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
     window.location.href = `searchPage.html?search=${e.target.value}`;
   }
+});
+// go to wish list page
+goToWishList.addEventListener("click", () => {
+  window.location.href = "favoritePage.html";
 });
