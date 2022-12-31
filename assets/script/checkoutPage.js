@@ -166,5 +166,8 @@ addPromoCode.addEventListener("click", () => {
 });
 // payment
 paymentButton.addEventListener("click", () => {
-  if (lastPrice.innerText !== "-") window.location.href = "paymentPage.html";
+  if (lastPrice.innerText !== "-") {
+    localStorage.setItem("lastPrice", lastPrice.innerText);
+    window.location.href = "paymentPage.html";
+  }
 });
