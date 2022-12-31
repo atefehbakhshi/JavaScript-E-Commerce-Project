@@ -1,0 +1,179 @@
+{
+  "products": [
+    {
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Nike",
+      "image": "../assets/images/shoe1.png",
+      "quantity": "0",
+      "id": "1",
+      "popular": "true"
+    },
+    {
+      "name": "K-Swiss Running Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Addidas",
+      "image": "../assets/images/shoe2.png",
+      "quantity": "0",
+      "id": "2",
+      "popular": "true"
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Puma",
+      "image": "../assets/images/shoe3.png",
+      "quantity": "2",
+      "id": "3",
+      "popular": "true"
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Converse",
+      "image": "../assets/images/shoe4.png",
+      "quantity": "2",
+      "id": "4",
+      "popular": "true"
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Converse",
+      "image": "../assets/images/shoe5.png",
+      "quantity": "2",
+      "id": "5",
+      "popular": "true"
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Nike",
+      "image": "../assets/images/shoe6.png",
+      "quantity": "2",
+      "id": "6",
+      "popular": "false"
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Nike",
+      "image": "../assets/images/shoe6.png",
+      "quantity": "2",
+      "id": "6",
+      "popular": "false"
+    }
+  ],
+  "carts": [
+    {
+      "name": "K-Swiss ista Train",
+      "image": "../assets/images/shoe6.png",
+      "size": "40",
+      "color": "silver",
+      "quantity": "2",
+      "price": "85.00",
+      "totalPrice": "170.00",
+      "delivery": true,
+      "id": 1672401498861
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "image": "../assets/images/shoe3.png",
+      "size": "42",
+      "color": "silver",
+      "quantity": 1,
+      "price": "85.00",
+      "totalPrice": "85.00",
+      "delivery": false,
+      "id": 1672455735191
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "image": "../assets/images/shoe3.png",
+      "size": "40",
+      "color": "green",
+      "quantity": "2",
+      "price": "85.00",
+      "totalPrice": "170.00",
+      "delivery": false,
+      "id": 1672479215293
+    }
+  ],
+  "address": [
+    {
+      "title": "Home",
+      "address": "61480 Sunbrook Park, PC 5679",
+      "select": false,
+      "id": 1672346824336
+    },
+    {
+      "title": "Office",
+      "address": "61480 Sunbrook Park, PC 5679",
+      "select": false,
+      "id": 1672346827238
+    },
+    {
+      "title": "Appartment",
+      "address": "61480 Sunbrook Park, PC 5679",
+      "select": false,
+      "id": 1672346831434
+    },
+    {
+      "title": "Parent's House",
+      "address": "61480 Sunbrook Park, PC 5679",
+      "select": false,
+      "id": 1672346843607
+    },
+    {
+      "title": "new addres",
+      "address": "tehran",
+      "select": false,
+      "id": 1672350007065
+    },
+    {
+      "title": "new address",
+      "address": "sss",
+      "select": false,
+      "id": 1672350487514
+    },
+    {
+      "title": "new address 2",
+      "address": "sss",
+      "select": true,
+      "id": 1672396859806
+    }
+  ],
+  "promoCode": [
+    {
+      "codeNumber": 1,
+      "value": 10
+    },
+    {
+      "codeNumber": 2,
+      "value": 20
+    },
+    {
+      "codeNumber": 3,
+      "value": 30
+    }
+  ],
+  "favorites": [
+    {
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
+      "description": "lorem episom",
+      "model-name": "Puma",
+      "image": "../assets/images/shoe3.png",
+      "quantity": "2",
+      "id": "3",
+      "popular": "true"
+    }
+  ]
+}
