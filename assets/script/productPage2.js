@@ -107,11 +107,21 @@ readProduct(productId);
 
 // user selected properties
 productSize.addEventListener("click", (e) => {
+  [...productSize.children].forEach((size) =>
+    size.classList.remove("selected-size")
+  );
   userSelectedProperties.size = e.target.innerText;
+  e.target.classList.add("selected-size");
 });
+
 productColor.addEventListener("click", (e) => {
+  [...productColor.children].forEach((color) =>
+    color.classList.remove("selected-color")
+  );
   userSelectedProperties.color = e.target.id;
+  e.target.classList.add("selected-color");
 });
+
 productQuantity.addEventListener("click", (e) => {
   if (e.target.innerText === "-") {
     productNumber.innerText = Number(productNumber.innerText) - 1;
