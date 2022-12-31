@@ -157,3 +157,8 @@ const readCarts = async () => {
   }
 };
 readCarts();
+
+// go to checkout page
+checkoutButton.addEventListener("click", () => {
+  window.location.href = "checkoutPage.html";
+});

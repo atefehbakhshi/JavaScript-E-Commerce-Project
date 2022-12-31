@@ -146,8 +146,8 @@
 #modal-container {
   display: none;
   background-color: rgba(0, 0, 0, 0.5);
-  height: 100vh;
-  position: absolute;
+  height: 100%;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -194,7 +194,7 @@
   cursor: pointer;
 }
 #cancel-button {
-  background-color: #fafafa;
+  background-color: #f3f3f3;
   color: black;
 }
 #remove-button {
