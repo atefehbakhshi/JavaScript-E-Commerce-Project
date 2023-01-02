@@ -94,7 +94,7 @@ readCarts();
 activeButton.addEventListener("click", () => {
   activeButton.classList.add("activ-header-button");
   completeButton.classList.remove("activ-header-button");
-  activeListContainer.style.display = "flex";
+  activeListContainer.style.display = "grid";
   completeListContainer.style.display = "none";
 });
 completeButton.addEventListener("click", () => {
@@ -102,5 +102,5 @@ completeButton.addEventListener("click", () => {
   completeButton.classList.add("activ-header-button");
 
   activeListContainer.style.display = "none";
-  completeListContainer.style.display = "flex";
+  completeListContainer.style.display = "grid";
 });

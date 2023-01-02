@@ -16,12 +16,13 @@ hr {
   border-bottom: 4px solid #152536 !important;
 }
 .list-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1em;
+  margin-bottom: 5em;
 }
 #active-list {
-  display: flex;
+  display: grid;
 }
 #complete-list {
   display: none;
@@ -61,4 +62,33 @@ hr {
 }
 #alert-text {
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #not-found {
+    width: 50%;
+    position: absolute;
+    left: calc((50%) / 2);
+  }
+}
+@media (min-width: 992px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  #search-box,
+  #active-completed-buttons,
+  hr,
+  .list-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

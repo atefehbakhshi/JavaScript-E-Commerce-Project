@@ -194,3 +194,29 @@ hr {
 #promo-price-row {
   display: none;
 }
+
+@media (min-width: 768px) {
+  #list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  #list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  nav,
+  .shiping-address,
+  hr,
+  #order-list,
+  #shipping-type-container,
+  #promo-code,
+  .total-price-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

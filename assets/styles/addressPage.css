@@ -67,3 +67,36 @@ form button {
   font-weight: 700;
   margin-right: 1em;
 }
+@media (min-width: 768px) {
+  nav {
+    margin-bottom: 1em !important;
+  }
+  #shipping-type-list,
+  #address-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  #apply {
+    left: calc((10%) / 2);
+  }
+}
+@media (min-width: 992px) {
+  nav,
+  #shipping-type-list,
+  #address-list,
+  .button-container,
+  #apply {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  #apply {
+    left: calc((100% - 1200px) / 2);
+  }
+}

@@ -30,3 +30,21 @@ p {
   font-size: 16px;
   line-height: 22px;
 }
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #wallpaper {
+    position: relative;
+    text-align: center;
+  }
+  p {
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0 2em;
+  }
+}

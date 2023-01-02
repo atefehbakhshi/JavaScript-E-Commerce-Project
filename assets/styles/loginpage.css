@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 2.5em 2em 2.5em;
   font-size: 1em;
 }
@@ -19,6 +19,7 @@ h1 {
   font-size: 32px;
   line-height: 39px;
   margin-bottom: 3em;
+  text-align: center;
 }
 .login-info {
   display: flex;
@@ -63,7 +64,18 @@ button {
   font-size: inherit;
   cursor: pointer;
 }
-.border{
-    border: 4px solid #212529;
-    border-radius: 0.5em;
+.border {
+  border: 4px solid #212529;
+  border-radius: 0.5em;
+}
+@media (min-width: 768px) {
+  #login-form {
+    max-width: 500px;
+    margin: auto;
+  }
+  #sign-in {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

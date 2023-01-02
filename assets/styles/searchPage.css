@@ -23,3 +23,9 @@
   gap: 1em;
   text-align: center;
 }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

@@ -55,3 +55,30 @@
   background-color: #152536;
   color: white;
 }
+
+@media (min-width: 768px) {
+  .container {
+    font-size: 1.5em;
+  }
+  button {
+    font-size: 1em;
+  }
+  nav {
+    margin-bottom: 1em !important;
+  }
+  #payment-method {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+}
+@media (min-width: 992px) {
+  nav,
+  p,
+  #payment-method,
+  #apply-button-container,
+  #apply {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

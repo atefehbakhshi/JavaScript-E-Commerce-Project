@@ -184,3 +184,28 @@
 .active-icon {
   display: none;
 }
+@media (min-width: 768px) {
+  #search-bar {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #companies-logo {
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: auto;
+  }
+  .logos {
+    width: 50%;
+    padding: 0 1em;
+  }
+  #products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  #products {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
