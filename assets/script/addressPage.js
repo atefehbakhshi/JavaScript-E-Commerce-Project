@@ -94,8 +94,10 @@ const updateAddress = async (newData, newDataId) => {
       id: prevList.id,
     };
     // update previous selected address
-    updateList(previousTrueData, previousTrueData.id);
-    updateList(newData, newDataId);
+    await updateList(previousTrueData, previousTrueData.id);
+    await updateList(newData, newDataId);
+    // after update an address go to checkout page by pressing apply button
+    window.location.href = "checkoutPage.html";
   } catch (error) {
     console.log(error);
   }
