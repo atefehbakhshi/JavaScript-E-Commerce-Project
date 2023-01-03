@@ -32,6 +32,41 @@ header {
   font-size: 1em;
   font-weight: 700;
 }
+
+/* search box */
+#search-box-container {
+  display: none;
+  background-color: #f3f3f3;
+  padding: 0.5em;
+  border-radius: 20px;
+}
+#search-box-container input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: inherit;
+}
+.show {
+  display: block !important;
+}
+/* not found page */
+#not-found {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  padding: 0 2em;
+}
+#not-found div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  text-align: center;
+}
+
 /* delete modal */
 .modal-container {
   display: none;

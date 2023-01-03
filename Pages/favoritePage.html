@@ -29,9 +29,11 @@
           <span class="material-symbols-outlined"> arrow_back </span>
           <p id="title-text">My Wishlist</p>
         </nav>
-        <span class="material-symbols-outlined"> search </span>
+        <span class="material-symbols-outlined" id="search"> search </span>
       </header>
-
+      <div id="search-box-container">
+        <input type="text" placeholder="Search..." id="input-search" />
+      </div>
       <!-- most popular -->
       <div id="most-popular">
         <header>
@@ -49,6 +51,17 @@
       </div>
       <!-- products -->
       <div id="products"></div>
+    </div>
+    <!-- product not found -->
+    <div id="not-found">
+      <img src="../assets/images/productNotFounf.png" alt="" />
+      <div>
+        <h4>Not Foun</h4>
+        <p>
+          Sorry, the keyword you entered cannot be found, please check again or
+          search with another keyword.
+        </p>
+      </div>
     </div>
     <!-- delete modal -->
     <div class="modal-container">
