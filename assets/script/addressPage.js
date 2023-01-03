@@ -1,13 +1,12 @@
 const API_URL = "http://localhost:3000";
 const $ = document;
+
+//========= Dom variables =========
 const backToCheckoutPage = $.querySelector("#back-to-checkout-page");
-
 const addressList = $.querySelector("#address-list");
-
 const addAddressButton = $.querySelector("#add-new-address");
 const formContainer = $.querySelector("#form-container");
 const addressForm = $.querySelector("#address-form");
-
 const applyButton = $.querySelector("#apply");
 
 // ============functions ============
@@ -20,6 +19,7 @@ const gatherFormDate = (e) => {
     select: false,
   };
 };
+
 const addToDom = (list) => {
   list.forEach((elem) => {
     const checked = elem.select;
@@ -44,6 +44,7 @@ const addToDom = (list) => {
     addressList.insertAdjacentHTML("beforeend", html);
   });
 };
+
 // read address from server
 const readAddress = async () => {
   try {
@@ -52,6 +53,7 @@ const readAddress = async () => {
     addToDom(data);
   } catch (error) {}
 };
+
 // create new address
 const addToAddress = async (e) => {
   e.preventDefault();
@@ -66,6 +68,7 @@ const addToAddress = async (e) => {
     console.log(error);
   }
 };
+
 // update selected address
 const updateList = async (data, id) => {
   try {
@@ -97,17 +100,22 @@ const updateAddress = async (newData, newDataId) => {
     console.log(error);
   }
 };
+
 // ============events ============
+// back to checkout page
 backToCheckoutPage.addEventListener("click", () => {
   window.location.href = "checkoutPage.html";
 });
+
 // create new address
 addAddressButton.addEventListener("click", () => {
   formContainer.style.display = "flex";
 });
 addressForm.addEventListener("submit", addToAddress);
+
 // read address
 readAddress();
+
 // slected address
 applyButton.addEventListener("click", () => {
   const addressContainers = $.querySelectorAll(".address-container");

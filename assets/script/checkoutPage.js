@@ -1,5 +1,7 @@
 const API_URL = "http://localhost:3000";
 const $ = document;
+
+//========= Dom variables =========
 const backToCartPage = $.querySelector("#back-to-checkout-page");
 const listContainer = $.querySelector("#list-container");
 const userTotalPrice = $.querySelector("#user-total-price");
@@ -24,7 +26,7 @@ const lastPrice = $.querySelector("#last-price");
 // payment
 const paymentButton = $.querySelector("#payment-button");
 
-// functions
+//========= functions =========
 const addToProducts = (list) => {
   list.forEach((elem) => {
     const html = `

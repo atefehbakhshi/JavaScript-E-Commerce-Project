@@ -1,4 +1,6 @@
 const $ = document;
+
+//========= Dom variables =========
 const checkedInput = $.querySelectorAll(".checked-input");
 const lastPrice = localStorage.getItem("lastPrice");
 const labels = $.querySelectorAll(".label");
@@ -9,6 +11,7 @@ const modalContainer = $.querySelector("#modal-container");
 const orderButton = $.querySelector("#view-order-button");
 const reciptButton = $.querySelector("#view-recipt-button");
 
+//========= events =========
 checkedInput.forEach((item) => {
   item.addEventListener("click", (e) => {
     labels.forEach((elem) => (elem.innerText = ""));

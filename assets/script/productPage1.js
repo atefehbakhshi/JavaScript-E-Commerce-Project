@@ -1,9 +1,8 @@
 import { slideOne, slideTwo, slideThree } from "../modules/slides.js";
-
 const API_URL = "http://localhost:3000";
-
 const $ = document;
-// Dom variables
+
+//========= Dom variables =========
 const homePageBtn = $.querySelectorAll(".back-to-home-page");
 
 const image1 = $.querySelector("#image-one");
@@ -17,28 +16,12 @@ const slideItemThree = $.querySelectorAll(".slide-item-three");
 const productName = $.querySelector("#product-name");
 const productDesc = $.querySelector("#product-desc");
 
-// event
-homePageBtn.forEach((item) => {
-  item.addEventListener("click", () => {
-    window.location.href = "homePage.html";
-  });
-});
-
-slideItemOne.forEach((item) => {
-  item.addEventListener("click", () => slideOne(image1, image2, image3));
-});
-slideItemTwo.forEach((item) => {
-  item.addEventListener("click", () => slideTwo(image1, image2, image3));
-});
-slideItemThree.forEach((item) => {
-  item.addEventListener("click", () => slideThree(image1, image2, image3));
-});
-
-//getting product from server
-// get product id
+//========= get product id =========
 const paramString = window.location.search;
 const searchParams = new URLSearchParams(paramString);
 const productId = searchParams.get("id");
+
+//========= functions =========
 // request to server
 const addToDom = (product) => {
   productName.innerText = product.name;
@@ -61,4 +44,22 @@ const readProduct = async (id) => {
     console.log(error);
   }
 };
+
+//========= events =========
 readProduct(productId);
+
+homePageBtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    window.location.href = "homePage.html";
+  });
+});
+
+slideItemOne.forEach((item) => {
+  item.addEventListener("click", () => slideOne(image1, image2, image3));
+});
+slideItemTwo.forEach((item) => {
+  item.addEventListener("click", () => slideTwo(image1, image2, image3));
+});
+slideItemThree.forEach((item) => {
+  item.addEventListener("click", () => slideThree(image1, image2, image3));
+});

@@ -1,10 +1,15 @@
 const $ = document;
+
+//========= Dom variables =========
 const shippingApplyButton = $.querySelector("#apply");
 const shippingContainer = $.querySelectorAll(".address-container");
-// events
+
+//========= functions =========
 const saveShipping = (data) => {
   localStorage.setItem("shippingType", JSON.stringify(data));
 };
+
+//========= events =========
 shippingApplyButton.addEventListener("click", () => {
   shippingContainer.forEach((elem) => {
     if (elem.children[1].children[1].checked) {

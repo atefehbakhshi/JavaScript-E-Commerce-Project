@@ -1,11 +1,13 @@
 const API_URL = "http://localhost:3000";
 const $ = document;
+
+//========= Dom variables =========
 const activeListContainer = $.querySelector("#active-list");
 const completeListContainer = $.querySelector("#complete-list");
-
 const activeButton = $.querySelector("#active-button");
 const completeButton = $.querySelector("#complete-button");
 
+//========= functions =========
 // empty page
 const emptyPage = (container, str) => {
   const html = `
@@ -79,6 +81,7 @@ const addToCards = (list) => {
     emptyPage(completeListContainer, "complete");
   }
 };
+
 // read data from server
 const readCarts = async () => {
   try {
@@ -89,7 +92,10 @@ const readCarts = async () => {
     console.log(error);
   }
 };
+
+//========= events =========
 readCarts();
+
 // toggle between lists
 activeButton.addEventListener("click", () => {
   activeButton.classList.add("activ-header-button");

@@ -1,13 +1,15 @@
 const API_URL = "http://localhost:3000";
 const $ = document;
+
+//========= Dom variables =========
 const cardsContainer = $.querySelector("#cards");
 const showTotalPrice = $.querySelector("#total-price");
 const cancelButton = $.querySelector("#cancel-button");
 const removeButton = $.querySelector("#remove-button");
 const checkoutButton = $.querySelector("#checkout-button");
-
 const modal = $.querySelector("#modal-container");
 
+//========= functions =========
 const addToCards = (list, listContainer) => {
   list.forEach((elem) => {
     const html = `
@@ -55,7 +57,7 @@ const changeTotalPrice = () => {
   showTotalPrice.innerText = `$${userTotalPrice}`;
 };
 
-const getDate = (item) => {
+const getData = (item) => {
   const productName = item.children[1].children[0].children[0].innerText;
   const productSrc = item.children[0].children[0].getAttribute("src");
   const productColor =
@@ -110,7 +112,7 @@ const changeQuantity = () => {
   cards.forEach((card) => {
     card.addEventListener("click", (e) => {
       // gather data
-      let updatedList = getDate(card);
+      let updatedList = getData(card);
       const productPrice = updatedList.price;
       const productId = updatedList.id;
       const quantity = card.children[1].children[2].children[1].children[2];
@@ -158,6 +160,7 @@ const readCarts = async () => {
 };
 readCarts();
 
+//========= events =========
 // go to checkout page
 checkoutButton.addEventListener("click", () => {
   window.location.href = "checkoutPage.html";

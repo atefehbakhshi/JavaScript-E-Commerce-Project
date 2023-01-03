@@ -1,7 +1,6 @@
 const $ = document;
-// variables
+//========= Dom variables =========
 const boardingPageBtn = $.querySelector("#back-to-boarding-page");
-
 const form = $.querySelector("#login-form");
 const userNameContainer = $.querySelector("#user-name-container");
 const passwordContainer = $.querySelector("#password-container");
@@ -9,22 +8,22 @@ const userName = $.querySelector("#user-name");
 const userPass = $.querySelector("#user-pass");
 const visibility = $.querySelector("#visibility-off");
 const rememberMe = $.querySelector("#remember-me");
-
 const loginBtn = $.querySelector("#sign-in");
-
+//========= global variables =========
 let user = {
   name: "",
   pass: "",
   remember: false,
 };
-// functions
+//========= functions =========
 const signIn = (userObject) => {
   loginBtn.addEventListener("click", () => {
     localStorage.setItem("user", JSON.stringify(userObject));
     window.location.href = "homePage.html";
   });
 };
-// events
+
+//========= events =========
 boardingPageBtn.addEventListener("click", () => {
   window.location.href = "onboardingpage3.html";
 });

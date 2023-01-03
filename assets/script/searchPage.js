@@ -34,6 +34,7 @@ const searchProduct = async (searchText) => {
     console.log(error);
   }
 };
+
 // ========= events =========
 inputText.value = searchWord;
 searchText.innerText = searchWord;
