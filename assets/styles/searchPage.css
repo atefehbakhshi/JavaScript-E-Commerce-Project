@@ -2,25 +2,14 @@
   padding-top: 2em;
 }
 #result-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-weight: 700;
   padding-bottom: 2em;
 }
 #not-found {
   display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 4em;
 }
 #not-found div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
   text-align: center;
 }
 @media (min-width: 1200px) {

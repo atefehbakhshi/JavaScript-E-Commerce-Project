@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/homePage.css" />
     <link rel="stylesheet" href="../assets/styles/searchPage.css" />
     <title>search page</title>
@@ -24,18 +25,18 @@
   <body>
     <div class="container">
       <!-- search -->
-      <div id="search-bar">
+      <div class="flex a-c gap10" id="search-bar">
         <span class="material-symbols-outlined"> search </span>
         <input type="text" id="search" placeholder="Search" />
       </div>
-      <div id="result-info">
+      <div class="flex j-sb a-c" id="result-info">
         <p>Result for "<span id="search-text"> </span>"</p>
         <p><span id="result-numbers"></span> founds</p>
       </div>
       <!-- product not found -->
-      <div id="not-found">
+      <div class="col j-c a-c" id="not-found">
         <img src="../assets/images/productNotFounf.png" alt="" />
-        <div>
+        <div class="flex col j-c a-c gap15">
           <h4>Not Foun</h4>
           <p>
             Sorry, the keyword you entered cannot be found, please check again

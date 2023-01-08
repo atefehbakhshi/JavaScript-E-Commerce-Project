@@ -3,24 +3,18 @@
 }
 /* back to checkout page */
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 1em;
 }
-#back-to-checkout-page {
-  display: flex;
-  gap: 0.5em;
+a {
+  color: black;
 }
-#back-to-checkout-page p {
+.link-text {
+  font-size: 1.17em;
   font-weight: 700;
 }
 #more {
   width: 2em;
   height: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 1px solid black;
   padding: 0 1em 0.5em 1em;
   border-radius: 50%;
@@ -33,17 +27,9 @@ h4 {
   margin-bottom: 1em;
 }
 .address-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1em;
   background-color: #fff;
   border-radius: 20px;
-}
-.address-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
 }
 #outer-border {
   display: inline-block;
@@ -72,9 +58,6 @@ hr {
 }
 /* order list */
 #list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
   padding-bottom: 1em;
 }
 .quantity {
@@ -87,26 +70,13 @@ hr {
   margin-bottom: 1em;
 }
 .selected-shipping {
-  display: flex;
-  justify-content: space-between;
-  gap: 1em;
   padding: 1em;
   border-radius: 25px;
   background-color: #fff;
 }
-.selected-shipping-type {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
 /* promo code */
 #promo-code {
   margin-bottom: 1em;
-}
-.input-code {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 #user-code {
   width: 75%;
@@ -146,9 +116,6 @@ hr {
   background-color: #fafafa;
 }
 #payment-button-inner-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 1em;
   background-color: #fafafa;
   border-top: 1px solid #c8c8c8;
@@ -157,8 +124,6 @@ hr {
 }
 #payment-button {
   width: 70%;
-  display: flex;
-  justify-content: center;
   gap: 1em;
   padding: 1em;
   border-radius: 30px;

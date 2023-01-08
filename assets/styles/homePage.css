@@ -9,11 +9,6 @@
   justify-content: space-between;
   align-items: center;
 }
-#user-name {
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
 #user-info p:first-child {
   font-weight: 500;
   font-size: 16px;
@@ -27,9 +22,6 @@
 }
 /* search */
 #search-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
   padding: 0.5em;
   background-color: #fafafa;
   margin-bottom: 1em;
@@ -47,8 +39,6 @@
   margin: 0 0.5em 1em 0.5em;
 }
 .logos {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 2em;
 }
 .logo-name {
@@ -70,9 +60,6 @@
   position: relative;
 }
 #header-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 0.5em;
 }
 #popular-btn {

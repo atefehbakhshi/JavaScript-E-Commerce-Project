@@ -17,37 +17,33 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/homePage.css" />
-    <link rel="stylesheet" href="../assets/styles/homeFilter.css" />
     <link rel="stylesheet" href="../assets/styles/favoritPage.css" />
     <title>favorite</title>
   </head>
   <body>
     <div class="container">
-      <header>
-        <nav id="back-to-home-page">
+      <header class="flex j-sb a-c">
+        <a class="flex gap10" href="homePage.html">
           <span class="material-symbols-outlined"> arrow_back </span>
           <p id="title-text">My Wishlist</p>
-        </nav>
+        </a>
         <span class="material-symbols-outlined" id="search"> search </span>
       </header>
       <div id="search-box-container">
         <input type="text" placeholder="Search..." id="input-search" />
       </div>
-      <!-- most popular -->
-      <div id="most-popular">
-        <header>
-          <div id="header-buttons">
-            <button>All</button>
-            <button>Nike</button>
-            <button>Adidas</button>
-            <button>Puma</button>
-            <button>Asics</button>
-            <button>Reebok</button>
-            <button>New Balance</button>
-            <button>Converse</button>
-          </div>
-        </header>
+      <!-- buttons -->
+      <div class="buttons">
+        <button class="button">All</button>
+        <button class="button">Nike</button>
+        <button class="button">Adidas</button>
+        <button class="button">Puma</button>
+        <button class="button">Asics</button>
+        <button class="button">Reebok</button>
+        <button class="button">New Balance</button>
+        <button class="button">Converse</button>
       </div>
       <!-- products -->
       <div id="products"></div>

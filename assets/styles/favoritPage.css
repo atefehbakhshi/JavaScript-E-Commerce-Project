@@ -1,20 +1,23 @@
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+a {
+  padding: 1em 0;
+  color: #152536;
+}
+#title-text {
+  font-weight: 600;
+  font-size: 1.5em;
 }
 .product-image {
   position: relative;
 }
 .favorite {
   position: absolute;
-  top: 1em;
-  right: 1em;
-  background-color: black;
+  top: 0.5em;
+  right: 0.5em;
   color: white;
+  background-color: black;
   padding: 0.25em;
   border-radius: 50%;
-  font-size: 1em;
+  font-size: 2em;
 }
 .sold-info {
   display: flex;
@@ -49,6 +52,41 @@ header {
 .show {
   display: block !important;
 }
+/* buttons */
+.buttons {
+  display: flex;
+  padding: 1em 0;
+  overflow-x: auto;
+}
+.buttons::-webkit-scrollbar {
+  display: none;
+}
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.25em 1em;
+  margin-right: 0.75em;
+  border: 2px solid black;
+  border-radius: 30px;
+  background-color: transparent;
+  color: #152536;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.button:hover {
+  color: white;
+  background-color: #212529;
+}
+.buttons button:last-child {
+  margin-right: 0;
+}
+
+.selected-button {
+  background-color: #152536;
+  color: white;
+}
+
 /* not found page */
 #not-found {
   display: none;
@@ -107,10 +145,10 @@ header {
   border-radius: 20px;
   cursor: pointer;
 }
-#cancel {
-  background-color: #f3f3f3 !important;
+#button-container #cancel {
+  background-color: #f3f3f3;
 }
-#apply {
-  color: white !important;
-  background-color: #152536 !important;
+#button-container #apply {
+  color: white;
+  background-color: #152536;
 }

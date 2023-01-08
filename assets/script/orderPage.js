@@ -37,7 +37,7 @@ const addToCards = (list) => {
     const html = `
           <div class="card">
                 <div class="product-img">
-                  <img src="${elem.image}" alt="shoea" />
+                  <img src="../${elem.image}" alt="shoea" />
                 </div>
                 <div class="product-info">
                   <div class="info-row-one">

@@ -14,5 +14,5 @@ const pageLocation = (page) => (window.location.href = `${page}Page.html`);
 home.addEventListener("click", () => pageLocation("home"));
 cart.addEventListener("click", () => pageLocation("cart"));
 order.addEventListener("click", () => pageLocation("order"));
-wallet.addEventListener("click", () => pageLocation("#"));
+wallet.addEventListener("click", () => pageLocation("payment"));
 profile.addEventListener("click", () => pageLocation("#"));

@@ -2,7 +2,7 @@ const $ = document;
 
 //========= Dom variables =========
 const shippingApplyButton = $.querySelector("#apply");
-const shippingContainer = $.querySelectorAll(".address-container");
+const shippingContainer = $.querySelectorAll(".shipping-container");
 
 //========= functions =========
 const saveShipping = (data) => {

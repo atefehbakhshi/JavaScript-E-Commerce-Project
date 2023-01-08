@@ -1,48 +1,52 @@
-body {
-  background-image: url(../images/wallpaperDog.jpg);
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.container::before {
+  content: "";
+  background-image: url(../images/welcome.jpg);
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  filter: brightness(0.3);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.container {
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.35);
-  color: white;
-  position: relative;
-}
-#wallpaper {
+.welcome-text {
   padding: 2em;
   position: absolute;
   bottom: 4em;
-}
-h3 {
-  font-weight: 600;
-  font-size: 40px;
-  margin-bottom: 16px;
+  color: #fff;
 }
 h1 {
   font-weight: 700;
   font-size: 72px;
   margin-bottom: 28px;
 }
+h3 {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
 p {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
 }
+
 @media (min-width: 768px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  #wallpaper {
-    position: relative;
+  .welcome-text {
+    width: 75%;
+    top: 25%;
+    left: 12.5%;
     text-align: center;
   }
   p {
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.5em;
     text-align: center;
     margin: 0 2em;

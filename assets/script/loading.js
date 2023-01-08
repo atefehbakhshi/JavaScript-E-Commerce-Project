@@ -1,10 +1,15 @@
-import { switchPage } from "../modules/switchPage.js";
-
 const user = JSON.parse(localStorage.getItem("user"));
+
 if (user !== null && user.remember) {
   setTimeout(() => {
     window.location.href = "homepage.html";
-  }, 2000);
+  }, 1000);
 }
 
-switchPage(2);
+const switchPage = () => {
+  document.body.addEventListener("click", () => {
+    window.location.href = `welcome.html`;
+  });
+};
+
+switchPage();

@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/productPage.css" />
     <link rel="stylesheet" href="../assets/styles/productPage2.css" />
     <title>product page2</title>
@@ -25,12 +26,12 @@
     <div class="container">
       <div id="row-one">
         <div id="image-one">
-          <nav>
-            <span class="material-symbols-outlined back-to-home-page">
-              arrow_back
-            </span>
+          <nav class="flex a-c">
+            <a href="homePage.html">
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </a>
           </nav>
-          <img src="../assets/images/shoe1.png" alt="shoea" />
+          <img src="../assets/images/products/shoe1.png" alt="shoea" />
           <div class="slides">
             <span class="slide-item slide-item-one current-slide"></span>
             <span class="slide-item slide-item-two"></span>
@@ -38,12 +39,12 @@
           </div>
         </div>
         <div id="image-two">
-          <nav>
-            <span class="material-symbols-outlined back-to-home-page">
-              arrow_back
-            </span>
+          <nav class="flex a-c">
+            <a href="homePage.html">
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </a>
           </nav>
-          <img src="../assets/images/shoe1.png" alt="shoea" />
+          <img src="../assets/images/products/shoe1.png" alt="shoea" />
           <div class="slides">
             <span class="slide-item slide-item-one"></span>
             <span class="slide-item slide-item-two current-slide"></span>
@@ -51,12 +52,12 @@
           </div>
         </div>
         <div id="image-three">
-          <nav>
-            <span class="material-symbols-outlined back-to-home-page">
-              arrow_back
-            </span>
+          <nav class="flex a-c">
+            <a href="homePage.html">
+              <span class="material-symbols-outlined"> arrow_back </span>
+            </a>
           </nav>
-          <img src="../assets/images/shoe1.png" alt="shoea" />
+          <img src="../assets/images/products/shoe1.png" alt="shoea" />
           <div class="slides">
             <span class="slide-item slide-item-one"></span>
             <span class="slide-item slide-item-two"></span>
@@ -65,8 +66,8 @@
         </div>
       </div>
       <div id="row-two">
-        <div id="title-favorit">
-          <p id="product-name">Running Sportwear</p>
+        <div class="flex j-sb a-c" id="title-favorit">
+          <p id="product-name"></p>
           <div>
             <span class="material-symbols-outlined hide" id="favorite">
               favorite
@@ -76,7 +77,7 @@
             >
           </div>
         </div>
-        <div id="sold-review">
+        <div class="flex a-c gap10" id="sold-review">
           <span id="sold-num">4,371 sold</span>
           <span class="material-symbols-outlined"> star_half </span>
           <span>4.3 (5,389 reviews)</span>
@@ -89,7 +90,7 @@
             non ullamcorp <span>view more...</span>
           </p>
         </div>
-        <div id="size-color">
+        <div class="flex a-c j-sb" id="size-color">
           <div id="product-size">
             <p id="size-color-text">Size</p>
             <div id="sizes">
@@ -100,7 +101,7 @@
           </div>
           <div id="product-color">
             <p id="size-color-text">Color</p>
-            <div id="colors">
+            <div class="flex gap5" id="colors">
               <span class="color-item" id="silver"></span>
               <span class="color-item" id="green"></span>
               <span class="color-item" id="perpule"></span>
@@ -112,9 +113,9 @@
             </div>
           </div>
         </div>
-        <div id="quantity-container">
+        <div class="flex a-c gap15" id="quantity-container">
           <p>Quantity</p>
-          <div id="quantity">
+          <div class="flex gap15" id="quantity">
             <span>-</span>
             <span id="product-number">1</span>
             <span>+</span>
@@ -122,12 +123,12 @@
         </div>
         <hr />
       </div>
-      <div id="row-three">
+      <div class="flex j-sb a-c" id="row-three">
         <div id="price-info">
           <p>Total price</p>
-          <p id="price">$ <span id="total-price">240.00</span></p>
+          <p id="price">$ <span id="total-price"></span></p>
         </div>
-        <div id="add-to-cart">
+        <div class="flex j-c a-c gap15" id="add-to-cart">
           <span class="material-icons active-icon"> shopping_bag </span>
           <button>Add to Cart</button>
         </div>

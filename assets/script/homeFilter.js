@@ -1,9 +1,8 @@
 import { addToDom } from "../modules/addToDom.js";
-
 const API_URL = "http://localhost:3000";
 const $ = document;
+
 //========= Dom variables =========
-const backToHome = $.querySelector("#back-to-home-page");
 const model = $.querySelector("#title-text");
 
 // get company name
@@ -24,9 +23,5 @@ const filterProduct = async (model) => {
 };
 //========= events =========
 model.innerText = productModel;
-
-backToHome.addEventListener("click", () => {
-  window.location.href = "homePage.html";
-});
 
 filterProduct(productModel);

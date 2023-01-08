@@ -1,12 +1,7 @@
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.container {
+  height: 100vh;
 }
 #logo {
-  display: flex;
-  justify-content: center;
   margin: auto;
   width: 75%;
 }

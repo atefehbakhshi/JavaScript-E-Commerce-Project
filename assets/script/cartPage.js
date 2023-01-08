@@ -15,7 +15,7 @@ const addToCards = (list, listContainer) => {
     const html = `
         <div class="card" id="${elem.id}">
               <div class="product-img">
-                <img src="${elem.image}" alt="shoea" />
+                <img src="../${elem.image}" alt="shoea" />
               </div>
               <div class="product-info">
                 <div class="info-row-one">
@@ -158,9 +158,10 @@ const readCarts = async () => {
     console.log(error);
   }
 };
-readCarts();
 
 //========= events =========
+readCarts();
+
 // go to checkout page
 checkoutButton.addEventListener("click", () => {
   window.location.href = "checkoutPage.html";

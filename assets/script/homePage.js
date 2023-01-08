@@ -8,7 +8,6 @@ const searcBox = $.querySelector("#search-bar");
 const companyLogos = $.querySelector("#companies-logo");
 const productsContainer = $.querySelector("#products");
 const mostPopularButtons = $.querySelector("#header-buttons");
-const goToWishList = $.querySelector("#favorit-page");
 
 //========= functions =========
 const readProduct = async () => {
@@ -22,9 +21,9 @@ const readProduct = async () => {
 };
 
 //========= events =========
-// show user name on top of home page
+// show user email on top of home page
 let userInfo = JSON.parse(localStorage.getItem("user"));
-userNameInfo.innerText = userInfo.name;
+userNameInfo.innerText = userInfo.email;
 
 // read product from API
 readProduct();
@@ -58,8 +57,4 @@ searcBox.addEventListener("keyup", (e) => {
   if (e.keyCode === 13) {
     window.location.href = `searchPage.html?search=${e.target.value}`;
   }
-});
-// go to wish list page
-goToWishList.addEventListener("click", () => {
-  window.location.href = "favoritePage.html";
 });

@@ -3,8 +3,6 @@ const API_URL = "http://localhost:3000";
 const $ = document;
 
 //========= Dom variables =========
-const homePageBtn = $.querySelectorAll(".back-to-home-page");
-
 const image1 = $.querySelector("#image-one");
 const image2 = $.querySelector("#image-two");
 const image3 = $.querySelector("#image-three");
@@ -28,11 +26,11 @@ const addToDom = (product) => {
   productDesc.innerText = product.description;
 
   const imageOne = image1.children;
-  imageOne[1].src = product.image;
+  imageOne[1].src = `../${product.image}`;
   const imageTwo = image2.children;
-  imageTwo[1].src = product.image;
+  imageTwo[1].src = `../${product.image}`;
   const imageThree = image3.children;
-  imageThree[1].src = product.image;
+  imageThree[1].src = `../${product.image}`;
 };
 
 const readProduct = async (id) => {
@@ -47,12 +45,6 @@ const readProduct = async (id) => {
 
 //========= events =========
 readProduct(productId);
-
-homePageBtn.forEach((item) => {
-  item.addEventListener("click", () => {
-    window.location.href = "homePage.html";
-  });
-});
 
 slideItemOne.forEach((item) => {
   item.addEventListener("click", () => slideOne(image1, image2, image3));

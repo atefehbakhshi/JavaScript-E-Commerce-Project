@@ -1,11 +1,8 @@
 import { slideOne, slideTwo, slideThree } from "../modules/slides.js";
-
 const API_URL = "http://localhost:3000";
-
 const $ = document;
-// Dom variables
-const homePageBtn = $.querySelectorAll(".back-to-home-page");
 
+//========= Dom variables =========
 const image1 = $.querySelector("#image-one");
 const image2 = $.querySelector("#image-two");
 const image3 = $.querySelector("#image-three");
@@ -27,6 +24,7 @@ let addToCartButton = $.querySelector("#add-to-cart");
 const addToFavoriteButton = $.querySelector("#favorite");
 const removeFromFavoriteButton = $.querySelector("#removeFavorite");
 
+//========= Global variables =========
 // variables for adding product to cart
 let userSelectedProperties = {
   name: "",
@@ -39,7 +37,40 @@ let userSelectedProperties = {
   delivery: false,
   id: "",
 };
-// functions
+
+// get product id
+const paramString = window.location.search;
+const searchParams = new URLSearchParams(paramString);
+const productId = searchParams.get("id");
+
+//========= functions =========
+// request to server
+const readProduct = async (id) => {
+  try {
+    const res = await fetch(`${API_URL}/products/${id}`);
+    const data = await res.json();
+    fillUserSelectedProperties(data);
+    totalPrice.innerText = data.price;
+    addToDom(data);
+    // check is favorite or not
+    isFavorite(id);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const addToDom = (product) => {
+  productName.innerText = product.name;
+  productDesc.innerText = product.description;
+
+  const imageOne = image1.children;
+  imageOne[1].src = `../${product.image}`;
+  const imageTwo = image2.children;
+  imageTwo[1].src = `../${product.image}`;
+  const imageThree = image3.children;
+  imageThree[1].src = `../${product.image}`;
+};
+
 const fillUserSelectedProperties = (data) => {
   userSelectedProperties.name = data.name;
   userSelectedProperties.image = data.image;
@@ -58,41 +89,8 @@ const addToCard = async (data) => {
     console.log(error);
   }
 };
-// event
-homePageBtn.forEach((item) => {
-  item.addEventListener("click", () => {
-    window.location.href = "homePage.html";
-  });
-});
 
-slideItemOne.forEach((item) => {
-  item.addEventListener("click", () => slideOne(image1, image2, image3));
-});
-slideItemTwo.forEach((item) => {
-  item.addEventListener("click", () => slideTwo(image1, image2, image3));
-});
-slideItemThree.forEach((item) => {
-  item.addEventListener("click", () => slideThree(image1, image2, image3));
-});
-
-//getting product from server
-// get product id
-const paramString = window.location.search;
-const searchParams = new URLSearchParams(paramString);
-const productId = searchParams.get("id");
-// request to server
-const addToDom = (product) => {
-  productName.innerText = product.name;
-  productDesc.innerText = product.description;
-
-  const imageOne = image1.children;
-  imageOne[1].src = product.image;
-  const imageTwo = image2.children;
-  imageTwo[1].src = product.image;
-  const imageThree = image3.children;
-  imageThree[1].src = product.image;
-};
-// checking product is in favorite list or not
+// favorits
 const isFavorite = async (id) => {
   try {
     const res = await fetch(`${API_URL}/favorites?id=${id}`);
@@ -106,19 +104,47 @@ const isFavorite = async (id) => {
     console.log(error);
   }
 };
-const readProduct = async (id) => {
+const addToFavoriteList = async (id) => {
   try {
     const res = await fetch(`${API_URL}/products/${id}`);
     const data = await res.json();
-    fillUserSelectedProperties(data);
-    totalPrice.innerText = data.price;
-    addToDom(data);
-    // check is favorite or not
-    isFavorite(id);
+    // add to list
+    try {
+      const res = await fetch(`${API_URL}/favorites`, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      });
+    } catch (error) {
+      console.log(error);
+    }
   } catch (error) {
     console.log(error);
   }
 };
+const removeFromFavoriteList = async (id) => {
+  try {
+    const res = await fetch(`${API_URL}/favorites/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+//========= events =========
+slideItemOne.forEach((item) => {
+  item.addEventListener("click", () => slideOne(image1, image2, image3));
+});
+slideItemTwo.forEach((item) => {
+  item.addEventListener("click", () => slideTwo(image1, image2, image3));
+});
+slideItemThree.forEach((item) => {
+  item.addEventListener("click", () => slideThree(image1, image2, image3));
+});
+
+// request to server
 readProduct(productId);
 
 // user selected properties
@@ -165,36 +191,6 @@ addToCartButton.addEventListener("click", () => {
     window.location.href = "cartPage.html";
   }
 });
-
-const addToFavoriteList = async (id) => {
-  try {
-    const res = await fetch(`${API_URL}/products/${id}`);
-    const data = await res.json();
-    // add to list
-    try {
-      const res = await fetch(`${API_URL}/favorites`, {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const removeFromFavoriteList = async (id) => {
-  try {
-    const res = await fetch(`${API_URL}/favorites/${id}`, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 // add to favorites list
 addToFavoriteButton.addEventListener("click", () =>

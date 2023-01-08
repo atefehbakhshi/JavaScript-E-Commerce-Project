@@ -17,15 +17,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/homePage.css" />
     <link rel="stylesheet" href="../assets/styles/cartPage.css" />
     <title>cart page</title>
   </head>
   <body>
     <div class="container">
-      <div id="search-box">
-        <div id="company-logo">
-          <img src="../assets/images/logo.png" alt="shoea" id="logo" />
+      <div class="flex j-sb a-c" id="search-box">
+        <div class="flex a-c gap15" id="company-logo">
+          <img src="../assets/images/logo/logo.png" alt="shoea" id="logo" />
           <h3>My Cart</h3>
         </div>
         <div id="search">
@@ -40,7 +41,7 @@
           <p id="title-text">Total price</p>
           <p id="total-price"></p>
         </div>
-        <div id="checkout-button">
+        <div class="flex j-c gap15" id="checkout-button">
           <button>Checkout</button>
           <span class="material-symbols-outlined"> arrow_forward </span>
         </div>
@@ -85,12 +86,12 @@
       </nav>
     </div>
     <div id="modal-container">
-      <div id="delete-modal">
+      <div class="col j-c" id="delete-modal">
         <h3>Remove From Cart</h3>
         <hr />
         <div id="remove-item-container"></div>
         <hr />
-        <div id="modal-buttons">
+        <div class="flex j-sa a-c" id="modal-buttons">
           <button id="cancel-button">Cancel</button>
           <button id="remove-button">Yes, Remove</button>
         </div>

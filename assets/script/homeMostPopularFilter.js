@@ -1,11 +1,8 @@
 import { addToDom } from "../modules/addToDom.js";
-
 const API_URL = "http://localhost:3000";
-const $ = document;
 
 //========= Dom variables =========
-const backToHome = $.querySelector("#back-to-home-page");
-const mostPopularButtons = $.querySelector("#header-buttons");
+const mostPopularButtons = document.querySelector("#header-buttons");
 
 //========= get company name =========
 const paramString = window.location.search;
@@ -23,6 +20,7 @@ const readProduct = async () => {
     console.log(error);
   }
 };
+
 // popular products by model
 const filterProduct = async (model) => {
   try {
@@ -35,6 +33,7 @@ const filterProduct = async (model) => {
     console.log(error);
   }
 };
+
 // request to server
 const readFromServer = (modelName) => {
   if (modelName === "All") {
@@ -43,6 +42,7 @@ const readFromServer = (modelName) => {
     filterProduct(modelName);
   }
 };
+
 // change selected button color
 const changeStyle = (selectedButtonText) => {
   const allButtons = [...mostPopularButtons.children];
@@ -54,12 +54,6 @@ const changeStyle = (selectedButtonText) => {
 };
 
 //========= events =========
-
-// back to home page
-backToHome.addEventListener("click", () => {
-  window.location.href = "homePage.html";
-});
-
 // change selected button color when page loaded for the first time
 changeStyle(productModel);
 

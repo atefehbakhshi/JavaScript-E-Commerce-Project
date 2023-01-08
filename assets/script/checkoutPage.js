@@ -2,11 +2,14 @@ const API_URL = "http://localhost:3000";
 const $ = document;
 
 //========= Dom variables =========
-const backToCartPage = $.querySelector("#back-to-checkout-page");
 const listContainer = $.querySelector("#list-container");
 const userTotalPrice = $.querySelector("#user-total-price");
 const goToAddressPage = $.querySelector("#go-to-address-page");
+// read address from server
+const addressTitle = $.querySelector("#address-title");
+const addressDesc = $.querySelector("#address-desc");
 // shipping page
+const navToShippingPage = $.querySelector("#select-shipping-type");
 const shippingTypePreviousSelect = $.querySelector("#shipping-type");
 const shippingTypeAfterSelect = $.querySelector(
   "#after-selected-shipping-type"
@@ -32,7 +35,7 @@ const addToProducts = (list) => {
     const html = `
   <div class="card">
   <div class="product-img">
-    <img src="${elem.image}" alt="shoea" />
+    <img src="../${elem.image}" alt="shoea" />
   </div>
   <div class="product-info">
     <div class="info-row-one">
@@ -58,23 +61,18 @@ const addToProducts = (list) => {
     listContainer.insertAdjacentHTML("beforeend", html);
   });
 };
-// total price
-const changeTotalPrice = () => {
-  const totalPriceItems = $.querySelectorAll(".total-price-itemes");
-  let userTotalPricecalculate = 0;
-  totalPriceItems.forEach((item) => {
-    userTotalPricecalculate += Number(item.innerText);
-  });
-  userTotalPrice.innerText = `$${userTotalPricecalculate}`;
-  // =================calculate whole cost =================
-  localStorage.setItem("productsPrice", userTotalPricecalculate);
-  // ================= end calculate whole cost =================
-};
 
-// back to cart page
-backToCartPage.addEventListener("click", () => {
-  window.location.href = "cartPage.html";
-});
+// read address from server
+const readAddress = async () => {
+  try {
+    const res = await fetch(`${API_URL}/address?select_like=true`);
+    const data = await res.json();
+    addressTitle.innerText = data[0].title;
+    addressDesc.innerText = data[0].address;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 // read data from server
 const readProduct = async () => {
@@ -87,36 +85,8 @@ const readProduct = async () => {
     console.log(error);
   }
 };
-readProduct();
-// read address from server
-const addressTitle = $.querySelector("#address-title");
-const addressDesc = $.querySelector("#address-desc");
-
-const readAddress = async () => {
-  try {
-    const res = await fetch(`${API_URL}/address?select_like=true`);
-    const data = await res.json();
-    addressTitle.innerText = data[0].title;
-    addressDesc.innerText = data[0].address;
-  } catch (error) {
-    console.log(error);
-  }
-};
-readAddress();
-
-// go to address page
-goToAddressPage.addEventListener("click", () => {
-  window.location.href = "addressPage.html";
-});
 
 // shipping type
-const navToShippingPage = $.querySelector("#select-shipping-type");
-navToShippingPage.addEventListener("click", () => {
-  window.location.href = "shippingPage.html";
-});
-goToShippingPage.addEventListener("click", () => {
-  window.location.href = "shippingPage.html";
-});
 const getShippingType = () => {
   let selectedShipping = JSON.parse(localStorage.getItem("shippingType"));
   if (selectedShipping !== null) {
@@ -136,7 +106,6 @@ const getShippingType = () => {
     localStorage.removeItem("shippingType");
   }
 };
-getShippingType();
 
 // promo code
 const calculateDiscount = (value) => {
@@ -163,9 +132,49 @@ const searchForEnterPromoCode = async (code) => {
     console.log(error);
   }
 };
+
+// total price
+const changeTotalPrice = () => {
+  const totalPriceItems = $.querySelectorAll(".total-price-itemes");
+  let userTotalPricecalculate = 0;
+  totalPriceItems.forEach((item) => {
+    userTotalPricecalculate += Number(item.innerText);
+  });
+  userTotalPrice.innerText = `$${userTotalPricecalculate}`;
+  // =================calculate whole cost =================
+  localStorage.setItem("productsPrice", userTotalPricecalculate);
+  // ================= end calculate whole cost =================
+};
+
+//========= events =========
+// read data from server
+readProduct();
+
+// read address from server
+readAddress();
+
+// go to address page
+goToAddressPage.addEventListener("click", () => {
+  window.location.href = "addressPage.html";
+});
+
+// shipping type
+getShippingType();
+
+// before selected shipping type
+navToShippingPage.addEventListener("click", () => {
+  window.location.href = "shippingPage.html";
+});
+// after selected shipping type
+goToShippingPage.addEventListener("click", () => {
+  window.location.href = "shippingPage.html";
+});
+
+// promo code
 addPromoCode.addEventListener("click", () => {
   searchForEnterPromoCode(userCode.value);
 });
+
 // payment
 paymentButton.addEventListener("click", () => {
   if (lastPrice.innerText !== "-") {

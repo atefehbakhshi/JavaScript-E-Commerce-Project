@@ -5,7 +5,7 @@
       "price": "85.00",
       "description": "lorem episom",
       "model-name": "Asics",
-      "image": "../assets/images/shoe1.png",
+      "image": "assets/images/products/shoe1.png",
       "quantity": "0",
       "id": "1",
       "popular": true
@@ -15,7 +15,7 @@
       "price": "95.00",
       "description": "lorem episom",
       "model-name": "Adidas",
-      "image": "../assets/images/shoe2.png",
+      "image": "assets/images/products/shoe2.png",
       "quantity": "0",
       "id": "2",
       "popular": true
@@ -25,7 +25,7 @@
       "price": "55.00",
       "description": "lorem episom",
       "model-name": "Puma",
-      "image": "../assets/images/shoe3.png",
+      "image": "assets/images/products/shoe3.png",
       "quantity": "2",
       "id": "3",
       "popular": true
@@ -35,7 +35,7 @@
       "price": "85.00",
       "description": "lorem episom",
       "model-name": "Converse",
-      "image": "../assets/images/shoe4.png",
+      "image": "assets/images/products/shoe4.png",
       "quantity": "2",
       "id": "4",
       "popular": true
@@ -45,7 +45,7 @@
       "price": "185.00",
       "description": "lorem episom",
       "model-name": "Nike",
-      "image": "../assets/images/shoe5.png",
+      "image": "assets/images/products/shoe5.png",
       "quantity": "2",
       "id": "5",
       "popular": true
@@ -55,7 +55,7 @@
       "price": "85.00",
       "description": "lorem episom",
       "model-name": "Nike",
-      "image": "../assets/images/shoe6.png",
+      "image": "assets/images/products/shoe6.png",
       "quantity": "2",
       "id": "6",
       "popular": true
@@ -65,7 +65,7 @@
       "price": "105.00",
       "description": "lorem episom",
       "model-name": "Reebok",
-      "image": "../assets/images/shoe7.png",
+      "image": "assets/images/products/shoe7.png",
       "quantity": "2",
       "id": "7",
       "popular": true
@@ -75,7 +75,7 @@
       "price": "95.00",
       "description": "lorem episom",
       "model-name": "Nike",
-      "image": "../assets/images/shoe8.png",
+      "image": "assets/images/products/shoe8.png",
       "quantity": "2",
       "id": "8",
       "popular": false
@@ -85,7 +85,7 @@
       "price": "85.00",
       "description": "lorem episom",
       "model-name": "Nike",
-      "image": "../assets/images/shoe9.png",
+      "image": "assets/images/products/shoe9.png",
       "quantity": "2",
       "id": "9",
       "popular": true
@@ -95,7 +95,7 @@
       "price": "205.00",
       "description": "lorem episom",
       "model-name": "Reebok",
-      "image": "../assets/images/shoe10.png",
+      "image": "assets/images/products/shoe10.png",
       "quantity": "2",
       "id": "10",
       "popular": false
@@ -103,43 +103,55 @@
   ],
   "carts": [
     {
-      "name": "Air Jordan 3 Retro",
-      "image": "../assets/images/shoe10.png",
+      "name": "RS-X Running Sneakers",
+      "image": "assets/images/products/shoe5.png",
       "size": "42",
-      "color": "green",
-      "price": "205.00",
-      "id": 1672720839118,
+      "color": "brown",
       "quantity": "2",
-      "totalPrice": "410"
-    },
-    {
-      "name": "K-Swiss ista Train",
-      "image": "../assets/images/shoe7.png",
-      "size": "42",
-      "color": "red",
-      "quantity": 1,
-      "price": "105.00",
-      "totalPrice": "105.00",
+      "price": "185.00",
+      "totalPrice": "370.00",
       "delivery": false,
-      "id": 1672720856162
+      "id": 1673189763282
     },
     {
       "name": "RS-X Running Sneakers",
-      "image": "../assets/images/shoe5.png",
+      "image": "assets/images/products/shoe5.png",
+      "size": "42",
+      "color": "perpule",
+      "quantity": "2",
+      "price": "185.00",
+      "totalPrice": "370.00",
+      "delivery": false,
+      "id": 1673189842692
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "image": "assets/images/products/shoe6.png",
+      "size": "42",
+      "color": "perpule",
+      "quantity": "2",
+      "price": "85.00",
+      "totalPrice": "170.00",
+      "delivery": false,
+      "id": 1673189865236
+    },
+    {
+      "name": "K-Swiss ista Train",
+      "image": "assets/images/products/shoe7.png",
       "size": "42",
       "color": "brown",
-      "quantity": 1,
-      "price": "185.00",
-      "totalPrice": "185.00",
-      "delivery": true,
-      "id": 1672720896158
+      "quantity": "2",
+      "price": "105.00",
+      "totalPrice": "210.00",
+      "delivery": false,
+      "id": 1673189876916
     }
   ],
   "address": [
     {
       "title": "Home",
       "address": "61480 Sunbrook Park, PC 5679",
-      "select": true,
+      "select": false,
       "id": 1672346824336
     },
     {
@@ -159,6 +171,12 @@
       "address": "61480 Sunbrook Park, PC 5679",
       "select": false,
       "id": 1672346843607
+    },
+    {
+      "title": "new address",
+      "address": "new",
+      "select": true,
+      "id": 1673189644138
     }
   ],
   "promoCode": [
@@ -178,42 +196,22 @@
   "favorites": [
     {
       "name": "K-Swiss ista Train",
-      "price": "85.00",
-      "description": "lorem episom",
-      "model-name": "Nike",
-      "image": "../assets/images/shoe6.png",
-      "quantity": "2",
-      "id": "6",
-      "popular": true
-    },
-    {
-      "name": "K-Swiss ista Train",
-      "price": "105.00",
-      "description": "lorem episom",
-      "model-name": "Reebok",
-      "image": "../assets/images/shoe7.png",
-      "quantity": "2",
-      "id": "7",
-      "popular": true
-    },
-    {
-      "name": "K-Swiss ista Train",
       "price": "55.00",
       "description": "lorem episom",
       "model-name": "Puma",
-      "image": "../assets/images/shoe3.png",
+      "image": "assets/images/products/shoe3.png",
       "quantity": "2",
       "id": "3",
       "popular": true
     },
     {
-      "name": "RS-X Running Sneakers",
-      "price": "185.00",
+      "name": "K-Swiss ista Train",
+      "price": "85.00",
       "description": "lorem episom",
       "model-name": "Nike",
-      "image": "../assets/images/shoe5.png",
+      "image": "assets/images/products/shoe6.png",
       "quantity": "2",
-      "id": "5",
+      "id": "6",
       "popular": true
     }
   ]

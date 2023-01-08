@@ -17,34 +17,35 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/checkoutPage.css" />
-    <link rel="stylesheet" href="../assets/styles/addressPage.css" />
-    <link rel="stylesheet" href="../assets/styles/paymentStyle.css" />
+    <link rel="stylesheet" href="../assets/styles/paymentPage.css" />
     <title>payment page</title>
   </head>
   <body>
     <div class="container">
       <!-- back to checkout page -->
-      <nav>
-        <div id="back-to-checkout-page">
+      <nav class="flex j-sb a-c">
+        <a class="flex a-c gap10" href="checkoutPage.html">
           <span class="material-symbols-outlined"> arrow_back </span>
-          <p>Payment Methods</p>
-        </div>
+          <p class="link-text">Payment Methods</p>
+        </a>
         <div>
           <div id="plus-button"><span>+</span></div>
         </div>
       </nav>
-      <!-- shipping type -->
+
+      <!-- payment type -->
       <p id="alert-text">Select the payment method you want to use.</p>
       <div id="payment-method">
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex a-c j-sb gap10 payment-container">
+          <div class="flex a-c j-c payment-info">
             <div>
-              <img src="../assets/images/pay-wallet.png" alt="shoea" />
+              <img src="../assets/images/payment/pay-wallet.png" alt="shoea" />
             </div>
-            <h5 class="address-name">My Wallet</h5>
+            <h5 class="payment-type">My Wallet</h5>
           </div>
-          <div>
+          <div class="flex a-c j-c gap5">
             <label for="my-wallet" class="label"></label>
             <input
               class="checked-input"
@@ -54,14 +55,14 @@
             />
           </div>
         </div>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex a-c j-sb gap10 payment-container">
+          <div class="flex a-c j-c payment-info">
             <div>
-              <img src="../assets/images/pay-paypal.png" alt="shoea" />
+              <img src="../assets/images/payment/pay-paypal.png" alt="shoea" />
             </div>
-            <h5 class="address-name">PayPal</h5>
+            <h5 class="payment-type">PayPal</h5>
           </div>
-          <div>
+          <div class="flex a-c j-c gap5">
             <label for="paypal" class="label"></label>
             <input
               class="checked-input"
@@ -71,14 +72,14 @@
             />
           </div>
         </div>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex a-c j-sb gap10 payment-container">
+          <div class="flex a-c j-c payment-info">
             <div>
-              <img src="../assets/images/pay-google.png" alt="shoea" />
+              <img src="../assets/images/payment/pay-google.png" alt="shoea" />
             </div>
-            <h5 class="address-name">Google Pay</h5>
+            <h5 class="payment-type">Google Pay</h5>
           </div>
-          <div>
+          <div class="flex a-c j-c gap5">
             <label for="google-pay" class="label"></label>
             <input
               class="checked-input"
@@ -88,14 +89,14 @@
             />
           </div>
         </div>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex a-c j-sb gap10 payment-container">
+          <div class="flex a-c j-c payment-info">
             <div>
-              <img src="../assets/images/pay-apple.png" alt="shoea" />
+              <img src="../assets/images/payment/pay-apple.png" alt="shoea" />
             </div>
-            <h5 class="address-name">Apple Pay</h5>
+            <h5 class="payment-type">Apple Pay</h5>
           </div>
-          <div>
+          <div class="flex a-c j-c gap5">
             <label for="apple-pay" class="label"></label>
             <input
               class="checked-input"
@@ -105,14 +106,17 @@
             />
           </div>
         </div>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex a-c j-sb gap10 payment-container">
+          <div class="flex a-c j-c payment-info">
             <div>
-              <img src="../assets/images/pay-mastercard.png" alt="shoea" />
+              <img
+                src="../assets/images/payment/pay-mastercard.png"
+                alt="shoea"
+              />
             </div>
-            <h5 class="address-name">.... .... .... 1234</h5>
+            <h5 class="payment-type">.... .... .... 1234</h5>
           </div>
-          <div>
+          <div class="flex a-c j-c gap5">
             <label for="mastercard" class="label"></label>
             <input
               class="checked-input"
@@ -123,14 +127,12 @@
           </div>
         </div>
       </div>
-      <div class="button-container">
-        <button id="apply">Confirm Payment</button>
-      </div>
+      <button id="apply">Confirm Payment</button>
     </div>
     <!-- modal -->
     <div id="modal-container">
       <div id="payment-modal">
-        <img src="../assets/images/payment-modal.png" alt="shoea" />
+        <img src="../assets/images/payment/payment-modal.png" alt="shoea" />
         <h3>Order Successful!</h3>
         <p>You made successfully made order</p>
         <div id="modal-buttons">
@@ -139,7 +141,6 @@
         </div>
       </div>
     </div>
-    <!--  -->
     <script src="../assets/script/paymentPage.js"></script>
   </body>
 </html>

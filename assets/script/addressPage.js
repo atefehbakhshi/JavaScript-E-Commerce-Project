@@ -2,7 +2,6 @@ const API_URL = "http://localhost:3000";
 const $ = document;
 
 //========= Dom variables =========
-const backToCheckoutPage = $.querySelector("#back-to-checkout-page");
 const addressList = $.querySelector("#address-list");
 const addAddressButton = $.querySelector("#add-new-address");
 const formContainer = $.querySelector("#form-container");
@@ -10,22 +9,12 @@ const addressForm = $.querySelector("#address-form");
 const applyButton = $.querySelector("#apply");
 
 // ============functions ============
-const gatherFormDate = (e) => {
-  const { title, address } = e.target;
-  return {
-    title: title.value,
-    address: address.value,
-    id: Date.now(),
-    select: false,
-  };
-};
-
 const addToDom = (list) => {
   list.forEach((elem) => {
     const checked = elem.select;
     const html = `
-    <div class="address-container" id="${elem.id}">
-          <div class="address-info">
+    <div class="flex j-sb a-c address-container" id="${elem.id}">
+          <div class="flex a-c gap10 address-info">
             <div id="outer-border">
               <span class="material-icons location"> location_on </span>
             </div>
@@ -68,6 +57,15 @@ const addToAddress = async (e) => {
     console.log(error);
   }
 };
+const gatherFormDate = (e) => {
+  const { title, address } = e.target;
+  return {
+    title: title.value,
+    address: address.value,
+    id: Date.now(),
+    select: false,
+  };
+};
 
 // update selected address
 const updateList = async (data, id) => {
@@ -104,15 +102,11 @@ const updateAddress = async (newData, newDataId) => {
 };
 
 // ============events ============
-// back to checkout page
-backToCheckoutPage.addEventListener("click", () => {
-  window.location.href = "checkoutPage.html";
-});
-
 // create new address
 addAddressButton.addEventListener("click", () => {
   formContainer.style.display = "flex";
 });
+
 addressForm.addEventListener("submit", addToAddress);
 
 // read address

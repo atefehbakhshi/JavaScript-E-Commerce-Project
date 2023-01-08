@@ -17,29 +17,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/checkoutPage.css" />
-    <link rel="stylesheet" href="../assets/styles/addressPage.css" />
+    <link rel="stylesheet" href="../assets/styles/shippingPage.css" />
     <title>address page</title>
   </head>
   <body>
     <div class="container">
-      <!-- back to checkout page -->
-      <nav>
-        <div id="back-to-checkout-page">
+      <nav class="flex j-sb a-c">
+        <a class="flex a-c gap10" href="checkoutPage.html">
           <span class="material-symbols-outlined"> arrow_back </span>
-          <p>Choose Shipping</p>
-        </div>
+          <p class="link-text">Checkout</p>
+        </a>
       </nav>
+
       <!-- shipping type -->
       <div id="shipping-type-list">
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex j-sb a-c shipping-container">
+          <div class="flex j-c a-c gap10">
             <span class="material-symbols-outlined location">
               check_box_outline_blank
             </span>
             <div>
-              <h5 class="address-name">Economy</h5>
-              <p class="address-desc">Estimated Arrival. Dec 20-23</p>
+              <h5 class="shipping-name">Economy</h5>
+              <p>Estimated Arrival. Dec 20-23</p>
             </div>
           </div>
           <div>
@@ -52,12 +53,12 @@
             />
           </div>
         </div>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex j-sb a-c shipping-container">
+          <div class="flex j-c a-c gap10">
             <span class="material-symbols-outlined location">check_box</span>
             <div>
-              <h5 class="address-name">Regular</h5>
-              <p class="address-desc">Estimated Arrival. Dec 20-22</p>
+              <h5 class="shipping-name">Regular</h5>
+              <p>Estimated Arrival. Dec 20-22</p>
             </div>
           </div>
           <div>
@@ -70,14 +71,14 @@
             />
           </div>
         </div>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex j-sb a-c shipping-container">
+          <div class="flex j-c a-c gap10">
             <span class="material-symbols-outlined location"
               >local_shipping</span
             >
             <div>
-              <h5 class="address-name">Cargo</h5>
-              <p class="address-desc">Estimated Arrival. Dec 19-20</p>
+              <h5 class="shipping-name">Cargo</h5>
+              <p>Estimated Arrival. Dec 19-20</p>
             </div>
           </div>
           <div>
@@ -90,14 +91,14 @@
             />
           </div>
         </div>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex j-sb a-c shipping-container">
+          <div class="flex j-c a-c gap10">
             <span class="material-symbols-outlined location"
               >local_shipping</span
             >
             <div>
-              <h5 class="address-name">Express</h5>
-              <p class="address-desc">Estimated Arrival. Dec 18-19</p>
+              <h5 class="shipping-name">Express</h5>
+              <p>Estimated Arrival. Dec 18-19</p>
             </div>
           </div>
           <div>

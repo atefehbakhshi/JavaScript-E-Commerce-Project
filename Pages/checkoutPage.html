@@ -17,27 +17,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/cartPage.css" />
     <link rel="stylesheet" href="../assets/styles/checkoutPage.css" />
     <title>checkout page</title>
   </head>
   <body>
     <div class="container">
-      <!-- back to checkout page -->
-      <nav>
-        <div id="back-to-checkout-page">
+      <!-- back to cart page -->
+      <nav class="flex j-sb a-c">
+        <a class="flex a-c gap10" href="cartPage.html">
           <span class="material-symbols-outlined"> arrow_back </span>
-          <p>Checkout</p>
-        </div>
-        <div id="more">
+          <p class="link-text">Checkout</p>
+        </a>
+        <div class="flex a-c j-c" id="more">
           <span>...</span>
         </div>
       </nav>
       <!-- shipping address -->
       <div class="shiping-address">
         <h4>Shipping Address</h4>
-        <div class="address-container">
-          <div class="address-info">
+        <div class="flex j-sb a-c address-container">
+          <div class="flex a-c gap10">
             <div id="outer-border">
               <span class="material-icons location"> location_on </span>
             </div>
@@ -55,15 +56,15 @@
       <!-- order list -->
       <div id="order-list">
         <h4>Order List</h4>
-        <div id="list-container"></div>
+        <div class="flex col gap15" id="list-container"></div>
       </div>
       <hr />
       <!-- shipping type -->
       <div id="shipping-type-container">
         <div id="shipping-type">
           <h4>Choose Shipping</h4>
-          <div class="selected-shipping">
-            <div class="selected-shipping-type">
+          <div class="flex j-sb gap15 selected-shipping">
+            <div class="flex a-c gap10">
               <span class="material-icons"> local_shipping </span>
               <h5>Choose Shipping Type</h5>
             </div>
@@ -75,8 +76,8 @@
         <div id="after-selected-shipping-type">
           <div class="shiping-address">
             <h4>Shipping Address</h4>
-            <div class="address-container">
-              <div class="address-info">
+            <div class="flex j-sb a-c address-container">
+              <div class="flex a-c gap10">
                 <span class="material-icons"> local_shipping </span>
                 <div>
                   <h5 class="address-name" id="shipping-title"></h5>
@@ -97,7 +98,7 @@
       <!-- promo code -->
       <div id="promo-code">
         <h4>Promo Code</h4>
-        <div class="input-code">
+        <div class="flex j-sb a-c">
           <input type="text" placeholder="Enter Promo Code" id="user-code" />
           <div class="plus-button" id="add-promo-code">+</div>
         </div>
@@ -125,8 +126,8 @@
     </div>
     <!-- payment button -->
     <div id="payment-button-outer-container">
-      <div id="payment-button-inner-container">
-        <div id="payment-button">
+      <div class="flex j-c a-c" id="payment-button-inner-container">
+        <div class="flex j-c" id="payment-button">
           <button>Continue to Payment</button>
           <span class="material-symbols-outlined"> arrow_forward </span>
         </div>

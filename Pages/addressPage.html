@@ -17,21 +17,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/checkoutPage.css" />
     <link rel="stylesheet" href="../assets/styles/addressPage.css" />
     <title>address page</title>
   </head>
   <body>
     <div class="container">
-      <!-- back to checkout page -->
-      <nav>
-        <div id="back-to-checkout-page">
+      <nav class="flex j-sb a-c">
+        <a class="flex a-c gap10" href="checkoutPage.html">
           <span class="material-symbols-outlined"> arrow_back </span>
-          <p>Shipping Address</p>
-        </div>
+          <p class="link-text">Shipping Address</p>
+        </a>
       </nav>
-      <!-- shipping address -->
 
+      <!-- shipping address -->
       <div id="address-list"></div>
       <div class="button-container">
         <button id="add-new-address">Add New Address</button>

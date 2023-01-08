@@ -5,7 +5,7 @@ export const addToDom = (list) => {
     const html = `
         <div class="product" id="${elem.id}">
             <div class="product-image">
-                 <img src="${elem.image}" alt="shoea" />
+                 <img src="../${elem.image}" alt="shoea" />
             </div>
             <div class="product-info">
                 <p class="product-name">${elem.name}...</p>

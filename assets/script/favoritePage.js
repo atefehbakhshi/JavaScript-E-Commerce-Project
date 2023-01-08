@@ -2,15 +2,14 @@ const API_URL = "http://localhost:3000";
 const $ = document;
 
 //========= Dom variables =========
-const backToHome = $.querySelector("#back-to-home-page");
-const mostPopularButtons = $.querySelector("#header-buttons");
-const productsContainer = document.querySelector("#products");
-const cancelButton = document.querySelector("#cancel");
-const applyButton = document.querySelector("#apply");
-const modalContainer = document.querySelector(".modal-container");
-const searchButton = document.querySelector("#search");
-const searchBoxContainer = document.querySelector("#search-box-container");
-const inputSearch = document.querySelector("#input-search");
+const mostPopularButtons = $.querySelector(".buttons");
+const productsContainer = $.querySelector("#products");
+const cancelButton = $.querySelector("#cancel");
+const applyButton = $.querySelector("#apply");
+const modalContainer = $.querySelector(".modal-container");
+const searchButton = $.querySelector("#search");
+const searchBoxContainer = $.querySelector("#search-box-container");
+const inputSearch = $.querySelector("#input-search");
 const notFoundPage = $.querySelector("#not-found");
 
 //========= get company name =========
@@ -26,7 +25,7 @@ const addToDom = (list) => {
     const html = `
         <div class="product" id="${elem.id}">
             <div class="product-image">
-                <img src="${elem.image}" alt="shoea" />
+                <img src="../${elem.image}" alt="shoea" />
                 <span class="material-icons favorite"> favorite </span>
             </div>
             <div class="product-info">
@@ -44,7 +43,6 @@ const addToDom = (list) => {
     productsContainer.insertAdjacentHTML("beforeend", html);
   });
 };
-
 // all popular products
 const readProduct = async () => {
   try {
@@ -86,7 +84,6 @@ const changeStyle = (selectedButtonText) => {
   );
   selectedButton[0].classList.add("selected-button");
 };
-
 // remove from favorite list
 const removeFromList = async (id) => {
   try {
@@ -120,12 +117,6 @@ const searchProduct = async (searchText) => {
 };
 
 //========= events =========
-
-// back to home page
-backToHome.addEventListener("click", () => {
-  window.location.href = "homePage.html";
-});
-
 // change selected button color when page loaded for the first time
 changeStyle("All");
 

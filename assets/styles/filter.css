@@ -1,11 +1,13 @@
-nav {
+a {
   padding: 1em 0;
-  display: flex;
-  gap: 1em;
+  color: #152536;
 }
 #title-text {
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 1.5em;
 }
+
+/* most popular */
 button {
   background-color: transparent !important;
   color: #152536 !important;

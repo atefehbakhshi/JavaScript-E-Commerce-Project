@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../assets/styles/reset.css" />
+    <link rel="stylesheet" href="../assets/styles/styled-system.css" />
     <link rel="stylesheet" href="../assets/styles/homePage.css" />
     <title>home page</title>
   </head>
@@ -24,8 +25,8 @@
     <div class="container">
       <!-- action bar -->
       <div id="action-bar">
-        <div id="user-name">
-          <img src="../assets/images/home.png" alt="shoea" />
+        <div class="flex a-c gap15" id="user-name">
+          <img src="../assets/images/home.png" alt="avatar" />
           <div id="user-info">
             <p>Good Morning 👋</p>
             <p id="user-name-info"></p>
@@ -33,49 +34,75 @@
         </div>
         <div id="user-action">
           <span class="material-symbols-outlined"> notifications </span>
-          <span class="material-symbols-outlined" id="favorit-page"> favorite </span>
+          <a href="favoritePage.html">
+            <span class="material-symbols-outlined"> favorite </span>
+          </a>
         </div>
       </div>
       <!-- search -->
-      <div id="search-bar">
+      <div class="flex a-c gap10" id="search-bar">
         <span class="material-symbols-outlined"> search </span>
         <input type="text" id="search" placeholder="Search" />
       </div>
       <!-- companies -->
       <div id="companies-logo">
-        <div class="logos">
+        <div class="flex j-sb logos">
           <div class="logo-name">
-            <img src="../assets/images/logo-nike.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-nike.png"
+              alt="shoea"
+            />
             <span>Nike</span>
           </div>
           <div class="logo-name">
-            <img src="../assets/images/logo-adidas.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-adidas.png"
+              alt="shoea"
+            />
             <span>Adidas</span>
           </div>
           <div class="logo-name">
-            <img src="../assets/images/logo-puma.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-puma.png"
+              alt="shoea"
+            />
             <span>Puma</span>
           </div>
           <div class="logo-name">
-            <img src="../assets/images/logo-asics.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-asics.png"
+              alt="shoea"
+            />
             <span>Asics</span>
           </div>
         </div>
-        <div class="logos">
+        <div class="flex j-sb logos">
           <div class="logo-name">
-            <img src="../assets/images/logo-reebok.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-reebok.png"
+              alt="shoea"
+            />
             <span>Reebok</span>
           </div>
           <div class="logo-name">
-            <img src="../assets/images/logo-newbalance.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-newbalance.png"
+              alt="shoea"
+            />
             <span>New Ba..</span>
           </div>
           <div class="logo-name">
-            <img src="../assets/images/logo-converse.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-converse.png"
+              alt="shoea"
+            />
             <span>Converse</span>
           </div>
           <div class="logo-name">
-            <img src="../assets/images/logo-more.png" alt="shoea" />
+            <img
+              src="../assets/images/logo/brand-logo/logo-more.png"
+              alt="shoea"
+            />
             <span>More ..</span>
           </div>
         </div>
@@ -83,7 +110,7 @@
       <!-- most popular -->
       <div id="most-popular">
         <header>
-          <div id="header-title">
+          <div class="flex j-sb a-c" id="header-title">
             <p id="popular-btn">Most Popular</p>
             <p id="all-btn">See All</p>
           </div>

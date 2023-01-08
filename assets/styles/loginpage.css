@@ -5,8 +5,6 @@
 }
 nav {
   height: 3.5em;
-  display: flex;
-  align-items: center;
   margin-bottom: 4.75em;
 }
 #logo {
@@ -22,9 +20,6 @@ h1 {
   text-align: center;
 }
 .login-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
   padding: 0.5em;
   background-color: #fafafa;
   margin-bottom: 1em;
@@ -38,9 +33,6 @@ h1 {
   background-color: #fafafa;
 }
 #remember {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 3em;
 }
 label {
@@ -48,8 +40,6 @@ label {
   font-weight: 500;
 }
 #sign-in {
-  display: flex;
-  justify-content: center;
   margin-top: 16em;
   padding: 12px 16px;
   background-color: #212529;

@@ -4,7 +4,6 @@ const $ = document;
 const checkedInput = $.querySelectorAll(".checked-input");
 const lastPrice = localStorage.getItem("lastPrice");
 const labels = $.querySelectorAll(".label");
-const backToCheckoutPage = $.querySelector("#back-to-checkout-page");
 const confirmPayment = $.querySelector("#apply");
 // modal
 const modalContainer = $.querySelector("#modal-container");
@@ -18,10 +17,6 @@ checkedInput.forEach((item) => {
     const label = e.target.previousElementSibling;
     label.innerText = lastPrice;
   });
-});
-
-backToCheckoutPage.addEventListener("click", () => {
-  window.location.href = "checkoutPage.html";
 });
 
 confirmPayment.addEventListener("click", () => {

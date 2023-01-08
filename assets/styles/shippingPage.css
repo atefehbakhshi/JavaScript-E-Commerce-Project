@@ -1,0 +1,62 @@
+.container {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  position: relative;
+}
+.shipping-container {
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-bottom: 1em;
+}
+.shipping-name {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+/* button */
+button {
+  padding: 1em;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+#apply {
+  width: 95%;
+  position: fixed;
+  bottom: 2em;
+  background-color: #152536;
+  color: white;
+}
+/* shipping type */
+.shipping-container label {
+  font-weight: 700;
+  margin-right: 1em;
+}
+@media (min-width: 768px) {
+  nav {
+    margin-bottom: 1em;
+  }
+  #shipping-type-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  #apply {
+    left: calc((10%) / 2);
+  }
+}
+@media (min-width: 992px) {
+  nav,
+  #shipping-type-list,
+  #apply {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  #apply {
+    left: calc((100% - 1200px) / 2);
+  }
+}
